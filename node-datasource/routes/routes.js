@@ -39,7 +39,7 @@ regexp:true, undef:true, strict:true, trailing:true, white:true */
     file = require('./file'),
     generateReport = require('./generate_report'),
     locale = require('./locale'),
-    passport = require('passport'),
+    //passport = require('passport'),
     redirector = require('./redirector'),
     report = require('./report'),
     recover = require('./recover'),
@@ -85,7 +85,7 @@ regexp:true, undef:true, strict:true, trailing:true, white:true */
     restDiscovery.getRest
   ];
   exports.restRouter = [
-    passport.authenticate('bearer', { session: false }),
+    //passport.authenticate('bearer', { session: false }),
     restRouter.router
   ];
 

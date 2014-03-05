@@ -1,0 +1,1287 @@
+install_packages()
+installing debian packages...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following extra packages will be installed:
+  comerr-dev dpkg-dev g++ g++-4.6 krb5-multidev libalgorithm-diff-perl
+  libalgorithm-diff-xs-perl libalgorithm-merge-perl libcurl3 libdpkg-perl
+  libgssapi-krb5-2 libgssrpc4 libicu48 libk5crypto3 libkadm5clnt-mit8
+  libkadm5srv-mit8 libkdb5-6 libkrb5-3 libkrb5support0 libossp-uuid16
+  libpq-dev libpq5 libssl1.0.0 libstdc++6-4.6-dev libv8-3.7.12.22 libxslt1.1
+  pgdg-keyring postgresql-client-9.1 postgresql-client-common
+  postgresql-common ssl-cert
+Suggested packages:
+  doc-base debian-keyring g++-multilib g++-4.6-multilib gcc-4.6-doc
+  libstdc++6-4.6-dbg krb5-doc krb5-user uuid postgresql-doc-9.3
+  libstdc++6-4.6-doc oidentd ident-server locales-all postgresql-doc-9.1
+  libdbd-pg-perl openssl-blacklist
+The following NEW packages will be installed:
+  build-essential comerr-dev curl dpkg-dev g++ g++-4.6 krb5-multidev
+  libalgorithm-diff-perl libalgorithm-diff-xs-perl libalgorithm-merge-perl
+  libcurl3 libdpkg-perl libgssrpc4 libicu48 libkadm5clnt-mit8 libkadm5srv-mit8
+  libkdb5-6 libossp-uuid16 libpq-dev libpq5 libstdc++6-4.6-dev libv8-3.7.12.22
+  libxslt1.1 pgdg-keyring postgresql-9.1 postgresql-9.1-plv8
+  postgresql-client-9.1 postgresql-client-common postgresql-common
+  postgresql-contrib-9.1 postgresql-server-dev-9.1 ssl-cert
+The following packages will be upgraded:
+  libgssapi-krb5-2 libk5crypto3 libkrb5-3 libkrb5support0 libssl-dev
+  libssl1.0.0
+6 upgraded, 32 newly installed, 0 to remove and 153 not upgraded.
+Need to get 31.2 MB of archives.
+After this operation, 88.6 MB of additional disk space will be used.
+Get:1 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libssl-dev amd64 1.0.1-4ubuntu5.11 [1,574 kB]
+Get:2 http://apt.postgresql.org/pub/repos/apt/ precise-pgdg/main libpq5 amd64 9.3.2-1.pgdg12.4+1 [564 kB]
+Get:3 http://apt.postgresql.org/pub/repos/apt/ precise-pgdg/main libpq-dev amd64 9.3.2-1.pgdg12.4+1 [631 kB]
+Get:4 http://apt.postgresql.org/pub/repos/apt/ precise-pgdg/main pgdg-keyring all 2013.2 [4,802 B]
+Get:5 http://apt.postgresql.org/pub/repos/apt/ precise-pgdg/main postgresql-client-common all 153.pgdg12.4+1 [71.6 kB]
+Get:6 http://apt.postgresql.org/pub/repos/apt/ precise-pgdg/main postgresql-client-9.1 amd64 9.1.11-1.pgdg12.4+1 [1,392 kB]
+Get:7 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libssl1.0.0 amd64 1.0.1-4ubuntu5.11 [1,050 kB]
+Get:8 http://apt.postgresql.org/pub/repos/apt/ precise-pgdg/main postgresql-common all 153.pgdg12.4+1 [164 kB]
+Get:9 http://apt.postgresql.org/pub/repos/apt/ precise-pgdg/main postgresql-9.1 amd64 9.1.11-1.pgdg12.4+1 [3,629 kB]
+Get:10 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libk5crypto3 amd64 1.10+dfsg~beta1-2ubuntu0.3 [80.1 kB]
+Get:11 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libgssapi-krb5-2 amd64 1.10+dfsg~beta1-2ubuntu0.3 [118 kB]
+Get:12 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libkrb5-3 amd64 1.10+dfsg~beta1-2ubuntu0.3 [355 kB]
+Get:13 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libkrb5support0 amd64 1.10+dfsg~beta1-2ubuntu0.3 [23.8 kB]
+Get:14 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libgssrpc4 amd64 1.10+dfsg~beta1-2ubuntu0.3 [57.5 kB]
+Get:15 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libkadm5clnt-mit8 amd64 1.10+dfsg~beta1-2ubuntu0.3 [38.7 kB]
+Get:16 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libkdb5-6 amd64 1.10+dfsg~beta1-2ubuntu0.3 [37.5 kB]
+Get:17 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libkadm5srv-mit8 amd64 1.10+dfsg~beta1-2ubuntu0.3 [54.4 kB]
+Get:18 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libcurl3 amd64 7.22.0-3ubuntu4.7 [236 kB]
+Get:19 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libxslt1.1 amd64 1.1.26-8ubuntu1.3 [167 kB]
+Get:20 http://us.archive.ubuntu.com/ubuntu/ precise/main libstdc++6-4.6-dev amd64 4.6.3-1ubuntu5 [1,660 kB]
+Get:21 http://apt.postgresql.org/pub/repos/apt/ precise-pgdg/main postgresql-contrib-9.1 amd64 9.1.11-1.pgdg12.4+1 [756 kB]
+Get:22 http://us.archive.ubuntu.com/ubuntu/ precise/main g++-4.6 amd64 4.6.3-1ubuntu5 [6,954 kB]
+Get:23 http://apt.postgresql.org/pub/repos/apt/ precise-pgdg/main postgresql-server-dev-9.1 amd64 9.1.11-1.pgdg12.4+1 [952 kB]
+Get:24 http://apt.postgresql.org/pub/repos/apt/ precise-pgdg/main postgresql-9.1-plv8 amd64 1.4.0.ds-2.pgdg12.4+1 [54.7 kB]
+Get:25 http://us.archive.ubuntu.com/ubuntu/ precise/main g++ amd64 4:4.6.3-1ubuntu5 [1,442 B]
+Get:26 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libdpkg-perl all 1.16.1.2ubuntu7.2 [180 kB]
+Get:27 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main dpkg-dev all 1.16.1.2ubuntu7.2 [469 kB]
+Get:28 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main build-essential amd64 11.5ubuntu2.1 [5,816 B]
+Get:29 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main curl amd64 7.22.0-3ubuntu4.7 [138 kB]
+Get:30 http://us.archive.ubuntu.com/ubuntu/ precise/main comerr-dev amd64 2.1-1.42-1ubuntu2 [42.7 kB]
+Get:31 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main krb5-multidev amd64 1.10+dfsg~beta1-2ubuntu0.3 [125 kB]
+Get:32 http://us.archive.ubuntu.com/ubuntu/ precise/main libalgorithm-diff-perl all 1.19.02-2 [50.7 kB]
+Get:33 http://us.archive.ubuntu.com/ubuntu/ precise/main libalgorithm-diff-xs-perl amd64 0.04-2build2 [12.4 kB]
+Get:34 http://us.archive.ubuntu.com/ubuntu/ precise/main libalgorithm-merge-perl all 0.08-2 [12.7 kB]
+Get:35 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libicu48 amd64 4.8.1.1-3ubuntu0.1 [8,105 kB]
+Get:36 http://us.archive.ubuntu.com/ubuntu/ precise/main libossp-uuid16 amd64 1.6.2-1.1build3 [51.4 kB]
+Get:37 http://us.archive.ubuntu.com/ubuntu/ precise/universe libv8-3.7.12.22 amd64 3.7.12.22-3 [1,369 kB]
+Get:38 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main ssl-cert all 1.0.28ubuntu0.1 [12.3 kB]
+dpkg-preconfigure: unable to re-open stdin: No such file or directory
+Fetched 31.2 MB in 26s (1,176 kB/s)
+(Reading database ... 73843 files and directories currently installed.)
+Preparing to replace libssl-dev 1.0.1-4ubuntu5.5 (using .../libssl-dev_1.0.1-4ubuntu5.11_amd64.deb) ...
+Unpacking replacement libssl-dev ...
+Preparing to replace libssl1.0.0 1.0.1-4ubuntu5.5 (using .../libssl1.0.0_1.0.1-4ubuntu5.11_amd64.deb) ...
+Unpacking replacement libssl1.0.0 ...
+Setting up libssl1.0.0 (1.0.1-4ubuntu5.11) ...
+Processing triggers for libc-bin ...
+ldconfig deferred processing now taking place
+(Reading database ... 73843 files and directories currently installed.)
+Preparing to replace libk5crypto3 1.10+dfsg~beta1-2 (using .../libk5crypto3_1.10+dfsg~beta1-2ubuntu0.3_amd64.deb) ...
+Unpacking replacement libk5crypto3 ...
+Preparing to replace libgssapi-krb5-2 1.10+dfsg~beta1-2 (using .../libgssapi-krb5-2_1.10+dfsg~beta1-2ubuntu0.3_amd64.deb) ...
+Unpacking replacement libgssapi-krb5-2 ...
+Preparing to replace libkrb5-3 1.10+dfsg~beta1-2 (using .../libkrb5-3_1.10+dfsg~beta1-2ubuntu0.3_amd64.deb) ...
+Unpacking replacement libkrb5-3 ...
+Preparing to replace libkrb5support0 1.10+dfsg~beta1-2 (using .../libkrb5support0_1.10+dfsg~beta1-2ubuntu0.3_amd64.deb) ...
+Unpacking replacement libkrb5support0 ...
+Selecting previously unselected package libgssrpc4.
+Unpacking libgssrpc4 (from .../libgssrpc4_1.10+dfsg~beta1-2ubuntu0.3_amd64.deb) ...
+Selecting previously unselected package libkadm5clnt-mit8.
+Unpacking libkadm5clnt-mit8 (from .../libkadm5clnt-mit8_1.10+dfsg~beta1-2ubuntu0.3_amd64.deb) ...
+Selecting previously unselected package libkdb5-6.
+Unpacking libkdb5-6 (from .../libkdb5-6_1.10+dfsg~beta1-2ubuntu0.3_amd64.deb) ...
+Selecting previously unselected package libkadm5srv-mit8.
+Unpacking libkadm5srv-mit8 (from .../libkadm5srv-mit8_1.10+dfsg~beta1-2ubuntu0.3_amd64.deb) ...
+Selecting previously unselected package libcurl3.
+Unpacking libcurl3 (from .../libcurl3_7.22.0-3ubuntu4.7_amd64.deb) ...
+Selecting previously unselected package libxslt1.1.
+Unpacking libxslt1.1 (from .../libxslt1.1_1.1.26-8ubuntu1.3_amd64.deb) ...
+Selecting previously unselected package libstdc++6-4.6-dev.
+Unpacking libstdc++6-4.6-dev (from .../libstdc++6-4.6-dev_4.6.3-1ubuntu5_amd64.deb) ...
+Selecting previously unselected package g++-4.6.
+Unpacking g++-4.6 (from .../g++-4.6_4.6.3-1ubuntu5_amd64.deb) ...
+Selecting previously unselected package g++.
+Unpacking g++ (from .../g++_4%3a4.6.3-1ubuntu5_amd64.deb) ...
+Selecting previously unselected package libdpkg-perl.
+Unpacking libdpkg-perl (from .../libdpkg-perl_1.16.1.2ubuntu7.2_all.deb) ...
+Selecting previously unselected package dpkg-dev.
+Unpacking dpkg-dev (from .../dpkg-dev_1.16.1.2ubuntu7.2_all.deb) ...
+Selecting previously unselected package build-essential.
+Unpacking build-essential (from .../build-essential_11.5ubuntu2.1_amd64.deb) ...
+Selecting previously unselected package curl.
+Unpacking curl (from .../curl_7.22.0-3ubuntu4.7_amd64.deb) ...
+Selecting previously unselected package comerr-dev.
+Unpacking comerr-dev (from .../comerr-dev_2.1-1.42-1ubuntu2_amd64.deb) ...
+Selecting previously unselected package krb5-multidev.
+Unpacking krb5-multidev (from .../krb5-multidev_1.10+dfsg~beta1-2ubuntu0.3_amd64.deb) ...
+Selecting previously unselected package libalgorithm-diff-perl.
+Unpacking libalgorithm-diff-perl (from .../libalgorithm-diff-perl_1.19.02-2_all.deb) ...
+Selecting previously unselected package libalgorithm-diff-xs-perl.
+Unpacking libalgorithm-diff-xs-perl (from .../libalgorithm-diff-xs-perl_0.04-2build2_amd64.deb) ...
+Selecting previously unselected package libalgorithm-merge-perl.
+Unpacking libalgorithm-merge-perl (from .../libalgorithm-merge-perl_0.08-2_all.deb) ...
+Selecting previously unselected package libicu48.
+Unpacking libicu48 (from .../libicu48_4.8.1.1-3ubuntu0.1_amd64.deb) ...
+Selecting previously unselected package libossp-uuid16.
+Unpacking libossp-uuid16 (from .../libossp-uuid16_1.6.2-1.1build3_amd64.deb) ...
+Selecting previously unselected package libpq5.
+Unpacking libpq5 (from .../libpq5_9.3.2-1.pgdg12.4+1_amd64.deb) ...
+Selecting previously unselected package libpq-dev.
+Unpacking libpq-dev (from .../libpq-dev_9.3.2-1.pgdg12.4+1_amd64.deb) ...
+Selecting previously unselected package libv8-3.7.12.22.
+Unpacking libv8-3.7.12.22 (from .../libv8-3.7.12.22_3.7.12.22-3_amd64.deb) ...
+Selecting previously unselected package pgdg-keyring.
+Unpacking pgdg-keyring (from .../pgdg-keyring_2013.2_all.deb) ...
+Selecting previously unselected package postgresql-client-common.
+Unpacking postgresql-client-common (from .../postgresql-client-common_153.pgdg12.4+1_all.deb) ...
+Selecting previously unselected package postgresql-client-9.1.
+Unpacking postgresql-client-9.1 (from .../postgresql-client-9.1_9.1.11-1.pgdg12.4+1_amd64.deb) ...
+Selecting previously unselected package ssl-cert.
+Unpacking ssl-cert (from .../ssl-cert_1.0.28ubuntu0.1_all.deb) ...
+Selecting previously unselected package postgresql-common.
+Unpacking postgresql-common (from .../postgresql-common_153.pgdg12.4+1_all.deb) ...
+Adding 'diversion of /usr/bin/pg_config to /usr/bin/pg_config.libpq-dev by postgresql-common'
+Selecting previously unselected package postgresql-9.1.
+Unpacking postgresql-9.1 (from .../postgresql-9.1_9.1.11-1.pgdg12.4+1_amd64.deb) ...
+Selecting previously unselected package postgresql-contrib-9.1.
+Unpacking postgresql-contrib-9.1 (from .../postgresql-contrib-9.1_9.1.11-1.pgdg12.4+1_amd64.deb) ...
+Selecting previously unselected package postgresql-server-dev-9.1.
+Unpacking postgresql-server-dev-9.1 (from .../postgresql-server-dev-9.1_9.1.11-1.pgdg12.4+1_amd64.deb) ...
+Selecting previously unselected package postgresql-9.1-plv8.
+Unpacking postgresql-9.1-plv8 (from .../postgresql-9.1-plv8_1.4.0.ds-2.pgdg12.4+1_amd64.deb) ...
+Processing triggers for man-db ...
+Processing triggers for install-info ...
+Processing triggers for ureadahead ...
+ureadahead will be reprofiled on next reboot
+Setting up libssl-dev (1.0.1-4ubuntu5.11) ...
+Setting up libkrb5support0 (1.10+dfsg~beta1-2ubuntu0.3) ...
+Setting up libk5crypto3 (1.10+dfsg~beta1-2ubuntu0.3) ...
+Setting up libkrb5-3 (1.10+dfsg~beta1-2ubuntu0.3) ...
+Setting up libgssapi-krb5-2 (1.10+dfsg~beta1-2ubuntu0.3) ...
+Setting up libgssrpc4 (1.10+dfsg~beta1-2ubuntu0.3) ...
+Setting up libkadm5clnt-mit8 (1.10+dfsg~beta1-2ubuntu0.3) ...
+Setting up libkdb5-6 (1.10+dfsg~beta1-2ubuntu0.3) ...
+Setting up libkadm5srv-mit8 (1.10+dfsg~beta1-2ubuntu0.3) ...
+Setting up libcurl3 (7.22.0-3ubuntu4.7) ...
+Setting up libxslt1.1 (1.1.26-8ubuntu1.3) ...
+Setting up libdpkg-perl (1.16.1.2ubuntu7.2) ...
+Setting up dpkg-dev (1.16.1.2ubuntu7.2) ...
+Setting up curl (7.22.0-3ubuntu4.7) ...
+Setting up comerr-dev (2.1-1.42-1ubuntu2) ...
+Setting up krb5-multidev (1.10+dfsg~beta1-2ubuntu0.3) ...
+Setting up libalgorithm-diff-perl (1.19.02-2) ...
+Setting up libalgorithm-diff-xs-perl (0.04-2build2) ...
+Setting up libalgorithm-merge-perl (0.08-2) ...
+Setting up libicu48 (4.8.1.1-3ubuntu0.1) ...
+Setting up libossp-uuid16 (1.6.2-1.1build3) ...
+Setting up libpq5 (9.3.2-1.pgdg12.4+1) ...
+Setting up libpq-dev (9.3.2-1.pgdg12.4+1) ...
+Setting up libv8-3.7.12.22 (3.7.12.22-3) ...
+Setting up pgdg-keyring (2013.2) ...
+Removing apt.postgresql.org key from trusted.gpg: OK
+Importing apt.postgresql.org key: OK
+Setting up postgresql-client-common (153.pgdg12.4+1) ...
+Setting up postgresql-client-9.1 (9.1.11-1.pgdg12.4+1) ...
+update-alternatives: using /usr/share/postgresql/9.1/man/man1/psql.1.gz to provide /usr/share/man/man1/psql.1.gz (psql.1.gz) in auto mode.
+Setting up ssl-cert (1.0.28ubuntu0.1) ...
+Setting up postgresql-common (153.pgdg12.4+1) ...
+Adding user postgres to group ssl-cert
+
+Creating config file /etc/logrotate.d/postgresql-common with new version
+Building PostgreSQL dictionaries from installed myspell/hunspell packages...
+Removing obsolete dictionary files:
+ * No PostgreSQL clusters exist; see "man pg_createcluster"
+Setting up postgresql-9.1 (9.1.11-1.pgdg12.4+1) ...
+Creating new cluster 9.1/main ...
+  config /etc/postgresql/9.1/main
+  data   /var/lib/postgresql/9.1/main
+  locale en_US.utf8
+  port   5432
+update-alternatives: using /usr/share/postgresql/9.1/man/man1/postmaster.1.gz to provide /usr/share/man/man1/postmaster.1.gz (postmaster.1.gz) in auto mode.
+ * Starting PostgreSQL 9.1 database server
+   ...done.
+Setting up postgresql-contrib-9.1 (9.1.11-1.pgdg12.4+1) ...
+Setting up postgresql-server-dev-9.1 (9.1.11-1.pgdg12.4+1) ...
+Setting up postgresql-9.1-plv8 (1.4.0.ds-2.pgdg12.4+1) ...
+Setting up libstdc++6-4.6-dev (4.6.3-1ubuntu5) ...
+Setting up g++-4.6 (4.6.3-1ubuntu5) ...
+Setting up g++ (4:4.6.3-1ubuntu5) ...
+update-alternatives: using /usr/bin/g++ to provide /usr/bin/c++ (c++) in auto mode.
+Setting up build-essential (11.5ubuntu2.1) ...
+Processing triggers for libc-bin ...
+ldconfig deferred processing now taking place
+installing npm modules...
+
+> xtuple@1.7.1 preinstall /home/vagrant/dev/xtuple
+> cd node-datasource/lib/query ; npm install
+
+npm http GET https://registry.npmjs.org/congruence/1.2.3
+npm http GET https://registry.npmjs.org/underscore/1.5.2
+npm http GET https://registry.npmjs.org/moment/2.4.0
+npm http 200 https://registry.npmjs.org/moment/2.4.0
+npm http GET https://registry.npmjs.org/moment/-/moment-2.4.0.tgz
+npm http 200 https://registry.npmjs.org/congruence/1.2.3
+npm http GET https://registry.npmjs.org/congruence/-/congruence-1.2.3.tgz
+npm http 200 https://registry.npmjs.org/underscore/1.5.2
+npm http GET https://registry.npmjs.org/underscore/-/underscore-1.5.2.tgz
+npm http 200 https://registry.npmjs.org/moment/-/moment-2.4.0.tgz
+npm http 200 https://registry.npmjs.org/underscore/-/underscore-1.5.2.tgz
+npm http 200 https://registry.npmjs.org/congruence/-/congruence-1.2.3.tgz
+congruence@1.2.3 node_modules/congruence
+
+underscore@1.5.2 node_modules/underscore
+
+moment@2.4.0 node_modules/moment
+npm http GET https://registry.npmjs.org/async/0.2.9
+npm http GET https://registry.npmjs.org/backbone/0.9.10
+npm http GET https://registry.npmjs.org/backbone-relational/0.8.0
+npm http GET https://registry.npmjs.org/bcrypt/0.7.7
+npm http GET https://registry.npmjs.org/colors/0.6.2
+npm http GET https://registry.npmjs.org/commander/1.2.0
+npm http GET https://registry.npmjs.org/congruence/1.2.4
+npm http GET https://registry.npmjs.org/connect-ensure-login/0.1.1
+npm http GET https://registry.npmjs.org/ejs/0.8.5
+npm http GET https://registry.npmjs.org/express/3.1.2
+npm http GET https://registry.npmjs.org/less/1.5.0
+npm http GET https://registry.npmjs.org/nodemailer/0.3.44
+npm http GET https://registry.npmjs.org/oauth2orize/0.1.0
+npm http GET https://registry.npmjs.org/oauth2orize-jwt-bearer/0.1.0
+npm http GET https://registry.npmjs.org/passport/0.1.17
+npm http GET https://registry.npmjs.org/passport-http/0.2.2
+npm http GET https://registry.npmjs.org/passport-http-bearer/0.2.1
+npm http GET https://registry.npmjs.org/passport-local/0.1.6
+npm http GET https://registry.npmjs.org/passport-oauth2-jwt-bearer/0.1.1
+npm http GET https://registry.npmjs.org/passport-oauth2-client-password/0.1.1
+npm http GET https://registry.npmjs.org/paynode/0.3.6
+npm http GET https://registry.npmjs.org/pg/0.14.1
+npm http GET https://registry.npmjs.org/request/2.14.0
+npm http GET https://registry.npmjs.org/rimraf/2.2.4
+npm http GET https://registry.npmjs.org/rjson/0.2.4
+npm http GET https://registry.npmjs.org/socket.io/0.9.16
+npm http GET https://registry.npmjs.org/underscore/1.4.4
+npm http GET https://registry.npmjs.org/winston/0.7.2
+npm http GET https://registry.npmjs.org/underscore.string/2.3.3
+npm http GET https://registry.npmjs.org/xtuple-query/1.0.0
+npm http GET https://registry.npmjs.org/googleapis/0.4.7
+npm http GET https://registry.npmjs.org/chai/1.5.0
+npm http GET https://registry.npmjs.org/require-uncache/0.0.2
+npm http GET https://registry.npmjs.org/mocha/1.9.0
+npm http GET https://registry.npmjs.org/zombie/1.4.1
+npm http GET https://registry.npmjs.org/html5/0.3.13
+npm http 200 https://registry.npmjs.org/async/0.2.9
+npm http GET https://registry.npmjs.org/async/-/async-0.2.9.tgz
+npm http 200 https://registry.npmjs.org/bcrypt/0.7.7
+npm http GET https://registry.npmjs.org/bcrypt/-/bcrypt-0.7.7.tgz
+npm http 200 https://registry.npmjs.org/backbone-relational/0.8.0
+npm http GET https://registry.npmjs.org/backbone-relational/-/backbone-relational-0.8.0.tgz
+npm http 200 https://registry.npmjs.org/commander/1.2.0
+npm http GET https://registry.npmjs.org/commander/-/commander-1.2.0.tgz
+npm http 200 https://registry.npmjs.org/connect-ensure-login/0.1.1
+npm http GET https://registry.npmjs.org/connect-ensure-login/-/connect-ensure-login-0.1.1.tgz
+npm http 200 https://registry.npmjs.org/congruence/1.2.4
+npm http GET https://registry.npmjs.org/congruence/-/congruence-1.2.4.tgz
+npm http 200 https://registry.npmjs.org/ejs/0.8.5
+npm http GET https://registry.npmjs.org/ejs/-/ejs-0.8.5.tgz
+npm http 200 https://registry.npmjs.org/backbone/0.9.10
+npm http GET https://registry.npmjs.org/backbone/-/backbone-0.9.10.tgz
+npm http 200 https://registry.npmjs.org/express/3.1.2
+npm http GET https://registry.npmjs.org/express/-/express-3.1.2.tgz
+npm http 200 https://registry.npmjs.org/nodemailer/0.3.44
+npm http GET https://registry.npmjs.org/nodemailer/-/nodemailer-0.3.44.tgz
+npm http 200 https://registry.npmjs.org/oauth2orize-jwt-bearer/0.1.0
+npm http GET https://registry.npmjs.org/oauth2orize-jwt-bearer/-/oauth2orize-jwt-bearer-0.1.0.tgz
+npm http 200 https://registry.npmjs.org/passport/0.1.17
+npm http GET https://registry.npmjs.org/passport/-/passport-0.1.17.tgz
+npm http 200 https://registry.npmjs.org/async/-/async-0.2.9.tgz
+npm http 200 https://registry.npmjs.org/bcrypt/-/bcrypt-0.7.7.tgz
+npm http 200 https://registry.npmjs.org/backbone-relational/-/backbone-relational-0.8.0.tgz
+npm http 200 https://registry.npmjs.org/passport-http/0.2.2
+npm http GET https://registry.npmjs.org/passport-http/-/passport-http-0.2.2.tgz
+npm http 200 https://registry.npmjs.org/commander/-/commander-1.2.0.tgz
+npm http 200 https://registry.npmjs.org/passport-http-bearer/0.2.1
+npm http GET https://registry.npmjs.org/passport-http-bearer/-/passport-http-bearer-0.2.1.tgz
+npm http 200 https://registry.npmjs.org/connect-ensure-login/-/connect-ensure-login-0.1.1.tgz
+npm http 200 https://registry.npmjs.org/congruence/-/congruence-1.2.4.tgz
+npm http 200 https://registry.npmjs.org/passport-local/0.1.6
+npm http GET https://registry.npmjs.org/passport-local/-/passport-local-0.1.6.tgz
+npm http 200 https://registry.npmjs.org/ejs/-/ejs-0.8.5.tgz
+npm http 200 https://registry.npmjs.org/backbone/-/backbone-0.9.10.tgz
+npm http 200 https://registry.npmjs.org/express/-/express-3.1.2.tgz
+npm http 200 https://registry.npmjs.org/nodemailer/-/nodemailer-0.3.44.tgz
+npm http 200 https://registry.npmjs.org/colors/0.6.2
+npm http GET https://registry.npmjs.org/colors/-/colors-0.6.2.tgz
+npm http 200 https://registry.npmjs.org/oauth2orize-jwt-bearer/-/oauth2orize-jwt-bearer-0.1.0.tgz
+npm http 200 https://registry.npmjs.org/passport-oauth2-client-password/0.1.1
+npm http GET https://registry.npmjs.org/passport-oauth2-client-password/-/passport-oauth2-client-password-0.1.1.tgz
+npm http 200 https://registry.npmjs.org/less/1.5.0
+npm http 200 https://registry.npmjs.org/passport-oauth2-jwt-bearer/0.1.1
+npm http GET https://registry.npmjs.org/passport-oauth2-jwt-bearer/-/passport-oauth2-jwt-bearer-0.1.1.tgz
+npm http GET https://registry.npmjs.org/less/-/less-1.5.0.tgz
+npm WARN package.json backbone@0.9.10 No repository field.
+npm http 200 https://registry.npmjs.org/paynode/0.3.6
+npm http 200 https://registry.npmjs.org/passport/-/passport-0.1.17.tgz
+npm http GET https://registry.npmjs.org/paynode/-/paynode-0.3.6.tgz
+npm http 200 https://registry.npmjs.org/passport-http/-/passport-http-0.2.2.tgz
+npm http 200 https://registry.npmjs.org/pg/0.14.1
+npm http GET https://registry.npmjs.org/pg/-/pg-0.14.1.tgz
+npm http 200 https://registry.npmjs.org/passport-http-bearer/-/passport-http-bearer-0.2.1.tgz
+npm http 200 https://registry.npmjs.org/oauth2orize/0.1.0
+npm http 200 https://registry.npmjs.org/request/2.14.0
+npm http GET https://registry.npmjs.org/oauth2orize/-/oauth2orize-0.1.0.tgz
+npm http GET https://registry.npmjs.org/request/-/request-2.14.0.tgz
+npm http 200 https://registry.npmjs.org/rimraf/2.2.4
+npm http GET https://registry.npmjs.org/rimraf/-/rimraf-2.2.4.tgz
+npm http 200 https://registry.npmjs.org/passport-local/-/passport-local-0.1.6.tgz
+npm http 200 https://registry.npmjs.org/rjson/0.2.4
+npm http 200 https://registry.npmjs.org/colors/-/colors-0.6.2.tgz
+npm http GET https://registry.npmjs.org/rjson/-/rjson-0.2.4.tgz
+npm http 200 https://registry.npmjs.org/passport-oauth2-jwt-bearer/-/passport-oauth2-jwt-bearer-0.1.1.tgz
+npm http 200 https://registry.npmjs.org/socket.io/0.9.16
+npm http 200 https://registry.npmjs.org/passport-oauth2-client-password/-/passport-oauth2-client-password-0.1.1.tgz
+npm http GET https://registry.npmjs.org/socket.io/-/socket.io-0.9.16.tgz
+npm http 200 https://registry.npmjs.org/underscore/1.4.4
+npm http GET https://registry.npmjs.org/underscore/-/underscore-1.4.4.tgz
+npm WARN package.json passport-local@0.1.6 No readme data.
+npm WARN package.json passport-oauth2-jwt-bearer@0.1.1 No readme data.
+npm http 200 https://registry.npmjs.org/less/-/less-1.5.0.tgz
+npm http 200 https://registry.npmjs.org/oauth2orize/-/oauth2orize-0.1.0.tgz
+npm http 200 https://registry.npmjs.org/pg/-/pg-0.14.1.tgz
+npm http 200 https://registry.npmjs.org/xtuple-query/1.0.0
+npm http GET https://registry.npmjs.org/xtuple-query/-/xtuple-query-1.0.0.tgz
+npm http 200 https://registry.npmjs.org/paynode/-/paynode-0.3.6.tgz
+npm http 200 https://registry.npmjs.org/googleapis/0.4.7
+npm http 200 https://registry.npmjs.org/request/-/request-2.14.0.tgz
+npm http GET https://registry.npmjs.org/googleapis/-/googleapis-0.4.7.tgz
+npm http 200 https://registry.npmjs.org/winston/0.7.2
+npm http GET https://registry.npmjs.org/winston/-/winston-0.7.2.tgz
+npm http 200 https://registry.npmjs.org/underscore.string/2.3.3
+npm http GET https://registry.npmjs.org/underscore.string/-/underscore.string-2.3.3.tgz
+npm WARN package.json oauth2orize@0.1.0 No readme data.
+npm http 200 https://registry.npmjs.org/require-uncache/0.0.2
+npm http GET https://registry.npmjs.org/require-uncache/-/require-uncache-0.0.2.tgz
+npm http 200 https://registry.npmjs.org/rimraf/-/rimraf-2.2.4.tgz
+npm http 200 https://registry.npmjs.org/rjson/-/rjson-0.2.4.tgz
+npm http 200 https://registry.npmjs.org/html5/0.3.13
+npm http GET https://registry.npmjs.org/html5/-/html5-0.3.13.tgz
+npm http 200 https://registry.npmjs.org/zombie/1.4.1
+npm http GET https://registry.npmjs.org/zombie/-/zombie-1.4.1.tgz
+npm http 200 https://registry.npmjs.org/chai/1.5.0
+npm http GET https://registry.npmjs.org/chai/-/chai-1.5.0.tgz
+npm http 200 https://registry.npmjs.org/mocha/1.9.0
+npm http GET https://registry.npmjs.org/mocha/-/mocha-1.9.0.tgz
+npm http 200 https://registry.npmjs.org/socket.io/-/socket.io-0.9.16.tgz
+npm http 200 https://registry.npmjs.org/underscore/-/underscore-1.4.4.tgz
+npm http 200 https://registry.npmjs.org/googleapis/-/googleapis-0.4.7.tgz
+npm http 200 https://registry.npmjs.org/winston/-/winston-0.7.2.tgz
+npm http 200 https://registry.npmjs.org/underscore.string/-/underscore.string-2.3.3.tgz
+npm http 200 https://registry.npmjs.org/require-uncache/-/require-uncache-0.0.2.tgz
+npm http 200 https://registry.npmjs.org/html5/-/html5-0.3.13.tgz
+npm http 200 https://registry.npmjs.org/zombie/-/zombie-1.4.1.tgz
+npm http 200 https://registry.npmjs.org/xtuple-query/-/xtuple-query-1.0.0.tgz
+npm http 200 https://registry.npmjs.org/chai/-/chai-1.5.0.tgz
+npm http 200 https://registry.npmjs.org/mocha/-/mocha-1.9.0.tgz
+npm WARN engine paynode@0.3.6: wanted: {"node":"~0.6.7"} (current: {"node":"v0.8.26","npm":"1.2.30"})
+npm http GET https://registry.npmjs.org/pkginfo/0.2.3
+npm http GET https://registry.npmjs.org/congruence/1.2.3
+npm http GET https://registry.npmjs.org/underscore/1.5.2
+npm http GET https://registry.npmjs.org/keypress/0.1.0
+npm http GET https://registry.npmjs.org/graceful-fs/2.0.1
+npm http 200 https://registry.npmjs.org/pkginfo/0.2.3
+npm http GET https://registry.npmjs.org/pkginfo/-/pkginfo-0.2.3.tgz
+npm http GET https://registry.npmjs.org/pause/0.0.1
+npm http 200 https://registry.npmjs.org/keypress/0.1.0
+npm http 304 https://registry.npmjs.org/congruence/1.2.3
+npm http GET https://registry.npmjs.org/keypress/-/keypress-0.1.0.tgz
+npm http 304 https://registry.npmjs.org/underscore/1.5.2
+npm http 200 https://registry.npmjs.org/graceful-fs/2.0.1
+npm http GET https://registry.npmjs.org/graceful-fs/-/graceful-fs-2.0.1.tgz
+npm http GET https://registry.npmjs.org/debug/0.7.4
+npm http 200 https://registry.npmjs.org/pkginfo/-/pkginfo-0.2.3.tgz
+npm http GET https://registry.npmjs.org/bindings/1.0.0
+npm http GET https://registry.npmjs.org/commander/1.1.1
+npm http GET https://registry.npmjs.org/connect/2.7.5
+npm http GET https://registry.npmjs.org/commander/0.6.1
+npm http GET https://registry.npmjs.org/range-parser/0.0.4
+npm http GET https://registry.npmjs.org/cookie/0.0.5
+npm http GET https://registry.npmjs.org/buffer-crc32/0.2.1
+npm http GET https://registry.npmjs.org/fresh/0.1.0
+npm http GET https://registry.npmjs.org/methods/0.0.1
+npm http GET https://registry.npmjs.org/send/0.1.0
+npm http GET https://registry.npmjs.org/cookie-signature/1.0.0
+npm http GET https://registry.npmjs.org/mkdirp/0.3.5
+npm http GET https://registry.npmjs.org/mailcomposer/0.2.6
+npm http GET https://registry.npmjs.org/simplesmtp/0.3.16
+npm http GET https://registry.npmjs.org/optimist/0.6.0
+npm http GET https://registry.npmjs.org/moment/2.4.0
+npm http 200 https://registry.npmjs.org/pause/0.0.1
+npm http GET https://registry.npmjs.org/pause/-/pause-0.0.1.tgz
+npm http 200 https://registry.npmjs.org/graceful-fs/-/graceful-fs-2.0.1.tgz
+npm http 200 https://registry.npmjs.org/keypress/-/keypress-0.1.0.tgz
+npm http 200 https://registry.npmjs.org/debug/0.7.4
+npm http 200 https://registry.npmjs.org/commander/0.6.1
+npm http GET https://registry.npmjs.org/commander/-/commander-0.6.1.tgz
+npm http GET https://registry.npmjs.org/debug/-/debug-0.7.4.tgz
+npm http 200 https://registry.npmjs.org/range-parser/0.0.4
+npm http GET https://registry.npmjs.org/braintree/1.9.2
+npm http 200 https://registry.npmjs.org/cookie/0.0.5
+npm http GET https://registry.npmjs.org/range-parser/-/range-parser-0.0.4.tgz
+npm http GET https://registry.npmjs.org/request/-/request-2.25.0.tgz
+npm http GET https://registry.npmjs.org/async/-/async-0.2.6.tgz
+npm http GET https://registry.npmjs.org/gapitoken/-/gapitoken-0.1.0.tgz
+npm http GET https://registry.npmjs.org/cookie/-/cookie-0.0.5.tgz
+npm http GET https://registry.npmjs.org/redis/0.7.3
+npm http GET https://registry.npmjs.org/socket.io-client/0.9.16
+npm http GET https://registry.npmjs.org/policyfile/0.0.4
+npm http GET https://registry.npmjs.org/base64id/0.1.0
+npm http 200 https://registry.npmjs.org/buffer-crc32/0.2.1
+npm http 200 https://registry.npmjs.org/fresh/0.1.0
+npm http GET https://registry.npmjs.org/buffer-crc32/-/buffer-crc32-0.2.1.tgz
+npm http GET https://registry.npmjs.org/fresh/-/fresh-0.1.0.tgz
+npm http 200 https://registry.npmjs.org/send/0.1.0
+npm http 200 https://registry.npmjs.org/methods/0.0.1
+npm http 200 https://registry.npmjs.org/bindings/1.0.0
+npm http GET https://registry.npmjs.org/bindings/-/bindings-1.0.0.tgz
+npm http GET https://registry.npmjs.org/methods/-/methods-0.0.1.tgz
+npm http GET https://registry.npmjs.org/send/-/send-0.1.0.tgz
+npm http 200 https://registry.npmjs.org/connect/2.7.5
+npm http 200 https://registry.npmjs.org/commander/1.1.1
+npm http 200 https://registry.npmjs.org/mkdirp/0.3.5
+npm http 200 https://registry.npmjs.org/cookie-signature/1.0.0
+npm http GET https://registry.npmjs.org/commander/-/commander-1.1.1.tgz
+npm http 200 https://registry.npmjs.org/pause/-/pause-0.0.1.tgz
+npm http GET https://registry.npmjs.org/connect/-/connect-2.7.5.tgz
+npm http 200 https://registry.npmjs.org/mailcomposer/0.2.6
+npm http GET https://registry.npmjs.org/mkdirp/-/mkdirp-0.3.5.tgz
+npm http GET https://registry.npmjs.org/cookie-signature/-/cookie-signature-1.0.0.tgz
+npm http GET https://registry.npmjs.org/mailcomposer/-/mailcomposer-0.2.6.tgz
+npm http 200 https://registry.npmjs.org/optimist/0.6.0
+npm http 304 https://registry.npmjs.org/moment/2.4.0
+npm http 200 https://registry.npmjs.org/commander/-/commander-0.6.1.tgz
+npm http 200 https://registry.npmjs.org/simplesmtp/0.3.16
+npm http 200 https://registry.npmjs.org/debug/-/debug-0.7.4.tgz
+npm http GET https://registry.npmjs.org/optimist/-/optimist-0.6.0.tgz
+npm http GET https://registry.npmjs.org/simplesmtp/-/simplesmtp-0.3.16.tgz
+npm http 200 https://registry.npmjs.org/braintree/1.9.2
+npm http 200 https://registry.npmjs.org/socket.io-client/0.9.16
+npm http 200 https://registry.npmjs.org/range-parser/-/range-parser-0.0.4.tgz
+npm http 200 https://registry.npmjs.org/async/-/async-0.2.6.tgz
+npm http 200 https://registry.npmjs.org/gapitoken/-/gapitoken-0.1.0.tgz
+npm http 200 https://registry.npmjs.org/request/-/request-2.25.0.tgz
+npm http 200 https://registry.npmjs.org/base64id/0.1.0
+npm http 200 https://registry.npmjs.org/cookie/-/cookie-0.0.5.tgz
+npm http GET https://registry.npmjs.org/braintree/-/braintree-1.9.2.tgz
+npm WARN package.json pause@0.0.1 No repository field.
+npm http 200 https://registry.npmjs.org/policyfile/0.0.4
+npm http GET https://registry.npmjs.org/socket.io-client/-/socket.io-client-0.9.16.tgz
+npm http GET https://registry.npmjs.org/base64id/-/base64id-0.1.0.tgz
+npm http GET https://registry.npmjs.org/policyfile/-/policyfile-0.0.4.tgz
+npm http 200 https://registry.npmjs.org/buffer-crc32/-/buffer-crc32-0.2.1.tgz
+npm http 200 https://registry.npmjs.org/redis/0.7.3
+npm http 200 https://registry.npmjs.org/fresh/-/fresh-0.1.0.tgz
+npm http 200 https://registry.npmjs.org/bindings/-/bindings-1.0.0.tgz
+npm http GET https://registry.npmjs.org/redis/-/redis-0.7.3.tgz
+npm http 200 https://registry.npmjs.org/methods/-/methods-0.0.1.tgz
+npm http 200 https://registry.npmjs.org/commander/-/commander-1.1.1.tgz
+npm http 200 https://registry.npmjs.org/send/-/send-0.1.0.tgz
+npm http GET https://registry.npmjs.org/cycle/1.0.2
+npm http GET https://registry.npmjs.org/eyes/0.1.8
+npm http GET https://registry.npmjs.org/pkginfo/0.3.0
+npm http GET https://registry.npmjs.org/request/2.16.6
+npm http GET https://registry.npmjs.org/stack-trace/0.0.7
+npm WARN package.json range-parser@0.0.4 No repository field.
+npm http 200 https://registry.npmjs.org/connect/-/connect-2.7.5.tgz
+npm http 200 https://registry.npmjs.org/mkdirp/-/mkdirp-0.3.5.tgz
+npm http 200 https://registry.npmjs.org/cookie-signature/-/cookie-signature-1.0.0.tgz
+npm http 200 https://registry.npmjs.org/mailcomposer/-/mailcomposer-0.2.6.tgz
+npm WARN package.json fresh@0.1.0 No repository field.
+npm WARN package.json methods@0.0.1 No repository field.
+npm WARN package.json methods@0.0.1 No readme data.
+npm WARN package.json cookie-signature@1.0.0 No repository field.
+npm http 200 https://registry.npmjs.org/socket.io-client/-/socket.io-client-0.9.16.tgz
+npm http 200 https://registry.npmjs.org/braintree/-/braintree-1.9.2.tgz
+npm http 200 https://registry.npmjs.org/optimist/-/optimist-0.6.0.tgz
+npm WARN package.json send@0.1.0 No repository field.
+npm http 200 https://registry.npmjs.org/simplesmtp/-/simplesmtp-0.3.16.tgz
+npm http 200 https://registry.npmjs.org/base64id/-/base64id-0.1.0.tgz
+npm http 200 https://registry.npmjs.org/policyfile/-/policyfile-0.0.4.tgz
+npm http 200 https://registry.npmjs.org/redis/-/redis-0.7.3.tgz
+npm http 200 https://registry.npmjs.org/cycle/1.0.2
+npm http 200 https://registry.npmjs.org/eyes/0.1.8
+npm http 200 https://registry.npmjs.org/pkginfo/0.3.0
+npm http GET https://registry.npmjs.org/eyes/-/eyes-0.1.8.tgz
+npm http GET https://registry.npmjs.org/cycle/-/cycle-1.0.2.tgz
+npm http GET https://registry.npmjs.org/pkginfo/-/pkginfo-0.3.0.tgz
+npm http 200 https://registry.npmjs.org/request/2.16.6
+npm http GET https://registry.npmjs.org/growl/1.7.0
+npm http GET https://registry.npmjs.org/jade/0.26.3
+npm http 200 https://registry.npmjs.org/stack-trace/0.0.7
+npm http GET https://registry.npmjs.org/diff/-/diff-1.0.2.tgz
+npm http GET https://registry.npmjs.org/mkdirp/-/mkdirp-0.3.3.tgz
+npm http GET https://registry.npmjs.org/ms/-/ms-0.3.0.tgz
+npm http GET https://registry.npmjs.org/request/-/request-2.16.6.tgz
+npm http GET https://registry.npmjs.org/stack-trace/-/stack-trace-0.0.7.tgz
+
+> bcrypt@0.7.7 install /home/vagrant/dev/xtuple/node_modules/bcrypt
+> node-gyp rebuild
+
+npm WARN package.json policyfile@0.0.4 No repository field.
+npm WARN package.json policyfile@0.0.4 'repositories' (plural) Not supported.
+npm WARN package.json Please pick one as the 'repository' field
+gyp http GET http://nodejs.org/dist/v0.8.26/node-v0.8.26.tar.gz
+npm http GET https://registry.npmjs.org/eventsource/0.0.10
+npm http GET https://registry.npmjs.org/jsdom/0.2.19
+npm http GET https://registry.npmjs.org/mime/1.2.11
+npm http GET https://registry.npmjs.org/ms/0.1.0
+npm http GET https://registry.npmjs.org/q/0.8.12
+npm http GET https://registry.npmjs.org/request/2.10.0
+npm http GET https://registry.npmjs.org/tough-cookie/0.9.15
+npm http GET https://registry.npmjs.org/ws/0.4.31
+npm http 200 https://registry.npmjs.org/eyes/-/eyes-0.1.8.tgz
+npm http 200 https://registry.npmjs.org/pkginfo/-/pkginfo-0.3.0.tgz
+npm http 200 https://registry.npmjs.org/cycle/-/cycle-1.0.2.tgz
+npm http GET https://registry.npmjs.org/deprecate/0.1.0
+npm http GET https://registry.npmjs.org/generic-pool/2.0.4
+npm http GET https://registry.npmjs.org/keypress/0.1.0
+npm http 200 https://registry.npmjs.org/growl/1.7.0
+npm WARN package.json eyes@0.1.8 No repository field.
+npm http GET https://registry.npmjs.org/growl/-/growl-1.7.0.tgz
+npm http 200 https://registry.npmjs.org/request/-/request-2.16.6.tgz
+npm http 200 https://registry.npmjs.org/ms/-/ms-0.3.0.tgz
+npm http 200 https://registry.npmjs.org/mkdirp/-/mkdirp-0.3.3.tgz
+npm http 200 https://registry.npmjs.org/jade/0.26.3
+npm http GET https://registry.npmjs.org/jade/-/jade-0.26.3.tgz
+npm http 200 https://registry.npmjs.org/ms/0.1.0
+npm http GET https://registry.npmjs.org/ms/-/ms-0.1.0.tgz
+npm http 200 https://registry.npmjs.org/diff/-/diff-1.0.2.tgz
+npm http 200 https://registry.npmjs.org/stack-trace/-/stack-trace-0.0.7.tgz
+npm http 200 https://registry.npmjs.org/q/0.8.12
+npm http 200 https://registry.npmjs.org/request/2.10.0
+npm http GET https://registry.npmjs.org/q/-/q-0.8.12.tgz
+npm http GET https://registry.npmjs.org/request/-/request-2.10.0.tgz
+npm http 200 https://registry.npmjs.org/growl/-/growl-1.7.0.tgz
+npm http 200 https://registry.npmjs.org/jade/-/jade-0.26.3.tgz
+npm http 200 https://registry.npmjs.org/ms/-/ms-0.1.0.tgz
+npm http 200 https://registry.npmjs.org/ws/0.4.31
+npm http 200 https://registry.npmjs.org/q/-/q-0.8.12.tgz
+npm http GET https://registry.npmjs.org/ws/-/ws-0.4.31.tgz
+npm WARN package.json growl@1.7.0 No repository field.
+npm http 200 https://registry.npmjs.org/tough-cookie/0.9.15
+npm http 200 https://registry.npmjs.org/jsdom/0.2.19
+npm http 200 https://registry.npmjs.org/request/-/request-2.10.0.tgz
+npm http 200 https://registry.npmjs.org/eventsource/0.0.10
+npm http 200 https://registry.npmjs.org/mime/1.2.11
+npm http GET https://registry.npmjs.org/tough-cookie/-/tough-cookie-0.9.15.tgz
+npm http 200 https://registry.npmjs.org/deprecate/0.1.0
+npm http GET https://registry.npmjs.org/jsdom/-/jsdom-0.2.19.tgz
+npm http GET https://registry.npmjs.org/eventsource/-/eventsource-0.0.10.tgz
+npm http 200 https://registry.npmjs.org/generic-pool/2.0.4
+npm http GET https://registry.npmjs.org/mime/-/mime-1.2.11.tgz
+npm http 304 https://registry.npmjs.org/keypress/0.1.0
+npm http GET https://registry.npmjs.org/deprecate/-/deprecate-0.1.0.tgz
+npm http GET https://registry.npmjs.org/generic-pool/-/generic-pool-2.0.4.tgz
+npm http 200 https://registry.npmjs.org/eventsource/-/eventsource-0.0.10.tgz
+npm http 200 https://registry.npmjs.org/mime/-/mime-1.2.11.tgz
+npm http 200 https://registry.npmjs.org/generic-pool/-/generic-pool-2.0.4.tgz
+npm http 200 https://registry.npmjs.org/deprecate/-/deprecate-0.1.0.tgz
+npm http 200 https://registry.npmjs.org/ws/-/ws-0.4.31.tgz
+npm http 200 https://registry.npmjs.org/tough-cookie/-/tough-cookie-0.9.15.tgz
+npm http 200 https://registry.npmjs.org/jsdom/-/jsdom-0.2.19.tgz
+gyp http 200 http://nodejs.org/dist/v0.8.26/node-v0.8.26.tar.gz
+npm WARN package.json ms@0.3.0 No repository field.
+npm WARN package.json ms@0.1.0 No repository field.
+npm WARN package.json jade@0.26.3 No readme data.
+npm http GET https://registry.npmjs.org/wordwrap/0.0.2
+npm http GET https://registry.npmjs.org/minimist/0.0.5
+npm http GET https://registry.npmjs.org/rai/0.1.8
+npm http GET https://registry.npmjs.org/xoauth2/0.1.8
+npm http GET https://registry.npmjs.org/mimelib/0.2.14
+npm http GET https://registry.npmjs.org/mime/1.2.9
+npm http GET https://registry.npmjs.org/he/0.3.6
+npm http GET https://registry.npmjs.org/punycode/1.2.3
+npm http GET https://registry.npmjs.org/dkim-signer/0.1.0
+npm http 200 https://registry.npmjs.org/minimist/0.0.5
+npm http 200 https://registry.npmjs.org/wordwrap/0.0.2
+npm http GET https://registry.npmjs.org/minimist/-/minimist-0.0.5.tgz
+npm http GET https://registry.npmjs.org/wordwrap/-/wordwrap-0.0.2.tgz
+
+> pg@0.14.1 install /home/vagrant/dev/xtuple/node_modules/pg
+> node-gyp rebuild || (exit 0)
+
+npm WARN package.json jsdom@0.2.19 No repository field.
+npm WARN package.json jsdom@0.2.19 'repositories' (plural) Not supported.
+npm WARN package.json Please pick one as the 'repository' field
+npm http 200 https://registry.npmjs.org/he/0.3.6
+npm http 200 https://registry.npmjs.org/mime/1.2.9
+npm http 200 https://registry.npmjs.org/xoauth2/0.1.8
+npm http 200 https://registry.npmjs.org/mimelib/0.2.14
+npm http GET https://registry.npmjs.org/mime/-/mime-1.2.9.tgz
+npm http GET https://registry.npmjs.org/he/-/he-0.3.6.tgz
+npm http GET https://registry.npmjs.org/xoauth2/-/xoauth2-0.1.8.tgz
+npm http GET https://registry.npmjs.org/mimelib/-/mimelib-0.2.14.tgz
+npm http 200 https://registry.npmjs.org/dkim-signer/0.1.0
+npm http 200 https://registry.npmjs.org/punycode/1.2.3
+npm http 200 https://registry.npmjs.org/rai/0.1.8
+npm http 200 https://registry.npmjs.org/minimist/-/minimist-0.0.5.tgz
+npm http 200 https://registry.npmjs.org/wordwrap/-/wordwrap-0.0.2.tgz
+gyp http GET http://nodejs.org/dist/v0.8.26/node-v0.8.26.tar.gz
+npm http GET https://registry.npmjs.org/dkim-signer/-/dkim-signer-0.1.0.tgz
+npm http GET https://registry.npmjs.org/punycode/-/punycode-1.2.3.tgz
+npm http GET https://registry.npmjs.org/rai/-/rai-0.1.8.tgz
+npm http GET https://registry.npmjs.org/jws/-/jws-0.0.2.tgz
+npm http 200 https://registry.npmjs.org/mimelib/-/mimelib-0.2.14.tgz
+npm http 200 https://registry.npmjs.org/dkim-signer/-/dkim-signer-0.1.0.tgz
+npm http 200 https://registry.npmjs.org/punycode/-/punycode-1.2.3.tgz
+npm http 200 https://registry.npmjs.org/rai/-/rai-0.1.8.tgz
+npm http 200 https://registry.npmjs.org/he/-/he-0.3.6.tgz
+npm http 200 https://registry.npmjs.org/mime/-/mime-1.2.9.tgz
+npm http 200 https://registry.npmjs.org/xoauth2/-/xoauth2-0.1.8.tgz
+npm http 200 https://registry.npmjs.org/jws/-/jws-0.0.2.tgz
+npm WARN package.json punycode@1.2.3 No readme data.
+gyp http 200 http://nodejs.org/dist/v0.8.26/node-v0.8.26.tar.gz
+npm http GET https://registry.npmjs.org/http-signature/0.10.0
+npm http GET https://registry.npmjs.org/tunnel-agent/0.3.0
+npm http GET https://registry.npmjs.org/aws-sign/0.3.0
+npm http GET https://registry.npmjs.org/oauth-sign/0.3.0
+npm http GET https://registry.npmjs.org/cookie-jar/0.3.0
+npm http GET https://registry.npmjs.org/node-uuid/1.4.1
+npm http GET https://registry.npmjs.org/forever-agent/0.5.0
+npm http GET https://registry.npmjs.org/hawk/-/hawk-1.0.0.tgz
+npm http GET https://registry.npmjs.org/form-data/-/form-data-0.1.2.tgz
+npm http GET https://registry.npmjs.org/qs/-/qs-0.6.6.tgz
+npm http GET https://registry.npmjs.org/json-stringify-safe/-/json-stringify-safe-5.0.0.tgz
+npm http GET https://registry.npmjs.org/mime/1.2.11
+npm http 200 https://registry.npmjs.org/tunnel-agent/0.3.0
+npm http 200 https://registry.npmjs.org/oauth-sign/0.3.0
+npm http 200 https://registry.npmjs.org/http-signature/0.10.0
+npm http GET https://registry.npmjs.org/tunnel-agent/-/tunnel-agent-0.3.0.tgz
+npm http GET https://registry.npmjs.org/oauth-sign/-/oauth-sign-0.3.0.tgz
+npm http GET https://registry.npmjs.org/http-signature/-/http-signature-0.10.0.tgz
+npm http 200 https://registry.npmjs.org/node-uuid/1.4.1
+npm http 200 https://registry.npmjs.org/aws-sign/0.3.0
+npm http 200 https://registry.npmjs.org/forever-agent/0.5.0
+npm http GET https://registry.npmjs.org/aws-sign/-/aws-sign-0.3.0.tgz
+npm http GET https://registry.npmjs.org/node-uuid/-/node-uuid-1.4.1.tgz
+npm http GET https://registry.npmjs.org/tap/-/tap-0.3.3.tgz
+npm http GET https://registry.npmjs.org/base64url/-/base64url-0.0.3.tgz
+npm http GET https://registry.npmjs.org/forever-agent/-/forever-agent-0.5.0.tgz
+npm http 304 https://registry.npmjs.org/mime/1.2.11
+npm http 200 https://registry.npmjs.org/hawk/-/hawk-1.0.0.tgz
+npm http 200 https://registry.npmjs.org/qs/-/qs-0.6.6.tgz
+npm http 200 https://registry.npmjs.org/form-data/-/form-data-0.1.2.tgz
+npm http 200 https://registry.npmjs.org/cookie-jar/0.3.0
+npm http GET https://registry.npmjs.org/cookie-jar/-/cookie-jar-0.3.0.tgz
+npm http 200 https://registry.npmjs.org/http-signature/-/http-signature-0.10.0.tgz
+npm http 200 https://registry.npmjs.org/json-stringify-safe/-/json-stringify-safe-5.0.0.tgz
+npm http 200 https://registry.npmjs.org/oauth-sign/-/oauth-sign-0.3.0.tgz
+npm http 200 https://registry.npmjs.org/tap/-/tap-0.3.3.tgz
+npm http 200 https://registry.npmjs.org/node-uuid/-/node-uuid-1.4.1.tgz
+npm http 200 https://registry.npmjs.org/aws-sign/-/aws-sign-0.3.0.tgz
+npm http 200 https://registry.npmjs.org/base64url/-/base64url-0.0.3.tgz
+npm http 200 https://registry.npmjs.org/forever-agent/-/forever-agent-0.5.0.tgz
+npm http 200 https://registry.npmjs.org/cookie-jar/-/cookie-jar-0.3.0.tgz
+npm http GET https://registry.npmjs.org/mime/1.2.6
+npm http 200 https://registry.npmjs.org/tunnel-agent/-/tunnel-agent-0.3.0.tgz
+npm http GET https://registry.npmjs.org/encoding/0.1.7
+npm http GET https://registry.npmjs.org/addressparser/0.2.0
+npm http GET https://registry.npmjs.org/form-data/0.0.10
+npm http GET https://registry.npmjs.org/hawk/0.10.2
+npm http GET https://registry.npmjs.org/cookie-jar/0.2.0
+npm http GET https://registry.npmjs.org/aws-sign/0.2.0
+npm http GET https://registry.npmjs.org/oauth-sign/0.2.0
+npm http GET https://registry.npmjs.org/forever-agent/0.2.0
+npm http GET https://registry.npmjs.org/tunnel-agent/0.2.0
+npm http GET https://registry.npmjs.org/json-stringify-safe/3.0.0
+npm http GET https://registry.npmjs.org/qs/0.5.6
+npm http GET https://registry.npmjs.org/mkdirp/0.3.0
+npm http 200 https://registry.npmjs.org/mime/1.2.6
+npm http GET https://registry.npmjs.org/mime/-/mime-1.2.6.tgz
+npm http 200 https://registry.npmjs.org/addressparser/0.2.0
+npm http 200 https://registry.npmjs.org/encoding/0.1.7
+npm http 200 https://registry.npmjs.org/cookie-jar/0.2.0
+npm http GET https://registry.npmjs.org/addressparser/-/addressparser-0.2.0.tgz
+npm http GET https://registry.npmjs.org/cookie-jar/-/cookie-jar-0.2.0.tgz
+npm http GET https://registry.npmjs.org/encoding/-/encoding-0.1.7.tgz
+npm http 200 https://registry.npmjs.org/aws-sign/0.2.0
+npm http 200 https://registry.npmjs.org/tunnel-agent/0.2.0
+npm http 200 https://registry.npmjs.org/forever-agent/0.2.0
+npm http 200 https://registry.npmjs.org/oauth-sign/0.2.0
+npm http GET https://registry.npmjs.org/aws-sign/-/aws-sign-0.2.0.tgz
+npm http GET https://registry.npmjs.org/tunnel-agent/-/tunnel-agent-0.2.0.tgz
+npm http GET https://registry.npmjs.org/forever-agent/-/forever-agent-0.2.0.tgz
+npm http GET https://registry.npmjs.org/oauth-sign/-/oauth-sign-0.2.0.tgz
+npm http 200 https://registry.npmjs.org/mkdirp/0.3.0
+npm http 200 https://registry.npmjs.org/qs/0.5.6
+npm http 200 https://registry.npmjs.org/mime/-/mime-1.2.6.tgz
+npm http GET https://registry.npmjs.org/mkdirp/-/mkdirp-0.3.0.tgz
+npm http GET https://registry.npmjs.org/qs/-/qs-0.5.6.tgz
+npm http 200 https://registry.npmjs.org/json-stringify-safe/3.0.0
+npm http 200 https://registry.npmjs.org/form-data/0.0.10
+npm http GET https://registry.npmjs.org/form-data/-/form-data-0.0.10.tgz
+npm http GET https://registry.npmjs.org/json-stringify-safe/-/json-stringify-safe-3.0.0.tgz
+npm http 200 https://registry.npmjs.org/encoding/-/encoding-0.1.7.tgz
+npm http 200 https://registry.npmjs.org/cookie-jar/-/cookie-jar-0.2.0.tgz
+npm http 200 https://registry.npmjs.org/addressparser/-/addressparser-0.2.0.tgz
+npm http 200 https://registry.npmjs.org/hawk/0.10.2
+npm http 200 https://registry.npmjs.org/tunnel-agent/-/tunnel-agent-0.2.0.tgz
+npm http GET https://registry.npmjs.org/hawk/-/hawk-0.10.2.tgz
+npm http 200 https://registry.npmjs.org/qs/-/qs-0.5.6.tgz
+npm http 200 https://registry.npmjs.org/mkdirp/-/mkdirp-0.3.0.tgz
+npm http 200 https://registry.npmjs.org/oauth-sign/-/oauth-sign-0.2.0.tgz
+npm http 200 https://registry.npmjs.org/forever-agent/-/forever-agent-0.2.0.tgz
+npm http 200 https://registry.npmjs.org/aws-sign/-/aws-sign-0.2.0.tgz
+npm WARN package.json tunnel-agent@0.2.0 No readme data.
+npm WARN package.json cookie-jar@0.2.0 No readme data.
+npm http 200 https://registry.npmjs.org/form-data/-/form-data-0.0.10.tgz
+npm http 200 https://registry.npmjs.org/json-stringify-safe/-/json-stringify-safe-3.0.0.tgz
+npm http 200 https://registry.npmjs.org/hawk/-/hawk-0.10.2.tgz
+npm WARN package.json forever-agent@0.2.0 No readme data.
+npm WARN package.json aws-sign@0.2.0 No readme data.
+npm WARN package.json oauth-sign@0.2.0 No readme data.
+npm http GET https://registry.npmjs.org/iconv-lite/0.2.11
+npm http GET https://registry.npmjs.org/dateformat/1.0.1-1.2.3
+npm http GET https://registry.npmjs.org/underscore/1.3.1
+npm http GET https://registry.npmjs.org/xml2js/0.1.13
+npm http GET https://registry.npmjs.org/source-map-support/0.1.2
+npm http GET https://registry.npmjs.org/punycode/1.2.3
+npm http 200 https://registry.npmjs.org/iconv-lite/0.2.11
+npm http GET https://registry.npmjs.org/buffer-crc32/0.1.1
+npm http GET https://registry.npmjs.org/bytes/0.2.0
+npm http GET https://registry.npmjs.org/iconv-lite/-/iconv-lite-0.2.11.tgz
+npm http GET https://registry.npmjs.org/qs/0.5.1
+npm http GET https://registry.npmjs.org/formidable/1.0.11
+npm http 200 https://registry.npmjs.org/underscore/1.3.1
+npm http 200 https://registry.npmjs.org/xml2js/0.1.13
+npm http GET https://registry.npmjs.org/pause/0.0.1
+npm http GET https://registry.npmjs.org/underscore/-/underscore-1.3.1.tgz
+npm http 200 https://registry.npmjs.org/source-map-support/0.1.2
+npm http 304 https://registry.npmjs.org/punycode/1.2.3
+npm http GET https://registry.npmjs.org/xml2js/-/xml2js-0.1.13.tgz
+npm http 200 https://registry.npmjs.org/dateformat/1.0.1-1.2.3
+npm http 200 https://registry.npmjs.org/buffer-crc32/0.1.1
+npm http GET https://registry.npmjs.org/source-map-support/-/source-map-support-0.1.2.tgz
+npm http 200 https://registry.npmjs.org/qs/0.5.1
+npm http 200 https://registry.npmjs.org/bytes/0.2.0
+npm http GET https://registry.npmjs.org/dateformat/-/dateformat-1.0.1-1.2.3.tgz
+npm http 200 https://registry.npmjs.org/formidable/1.0.11
+npm http GET https://registry.npmjs.org/buffer-crc32/-/buffer-crc32-0.1.1.tgz
+npm http GET https://registry.npmjs.org/qs/-/qs-0.5.1.tgz
+npm http GET https://registry.npmjs.org/bytes/-/bytes-0.2.0.tgz
+npm http GET https://registry.npmjs.org/formidable/-/formidable-1.0.11.tgz
+npm http 304 https://registry.npmjs.org/pause/0.0.1
+npm http 200 https://registry.npmjs.org/iconv-lite/-/iconv-lite-0.2.11.tgz
+npm http GET https://registry.npmjs.org/contextify/0.1.6
+npm http GET https://registry.npmjs.org/cssom/0.2.5
+npm http GET https://registry.npmjs.org/cssstyle/-/cssstyle-0.2.9.tgz
+npm http GET https://registry.npmjs.org/htmlparser/-/htmlparser-1.7.7.tgz
+npm http 200 https://registry.npmjs.org/underscore/-/underscore-1.3.1.tgz
+npm http 200 https://registry.npmjs.org/xml2js/-/xml2js-0.1.13.tgz
+npm http GET https://registry.npmjs.org/nan/0.3.2
+npm http GET https://registry.npmjs.org/tinycolor/0.0.1
+npm http 200 https://registry.npmjs.org/dateformat/-/dateformat-1.0.1-1.2.3.tgz
+npm http 200 https://registry.npmjs.org/source-map-support/-/source-map-support-0.1.2.tgz
+npm http 200 https://registry.npmjs.org/buffer-crc32/-/buffer-crc32-0.1.1.tgz
+npm http GET https://registry.npmjs.org/options/0.0.5
+npm http GET https://registry.npmjs.org/commander/0.6.1
+npm WARN package.json dateformat@1.0.1-1.2.3 No repository field.
+npm WARN package.json source-map-support@0.1.2 No repository field.
+npm http 200 https://registry.npmjs.org/formidable/-/formidable-1.0.11.tgz
+npm http 200 https://registry.npmjs.org/qs/-/qs-0.5.1.tgz
+npm http 200 https://registry.npmjs.org/bytes/-/bytes-0.2.0.tgz
+npm WARN package.json bytes@0.2.0 No repository field.
+npm http 200 https://registry.npmjs.org/cssstyle/-/cssstyle-0.2.9.tgz
+npm http 200 https://registry.npmjs.org/htmlparser/-/htmlparser-1.7.7.tgz
+npm http GET https://registry.npmjs.org/combined-stream/0.0.4
+npm http GET https://registry.npmjs.org/async/0.2.9
+npm http 200 https://registry.npmjs.org/contextify/0.1.6
+npm http GET https://registry.npmjs.org/contextify/-/contextify-0.1.6.tgz
+npm http 200 https://registry.npmjs.org/tinycolor/0.0.1
+npm http GET https://registry.npmjs.org/assert-plus/-/assert-plus-0.1.2.tgz
+npm http GET https://registry.npmjs.org/asn1/-/asn1-0.1.11.tgz
+npm http GET https://registry.npmjs.org/ctype/-/ctype-0.5.2.tgz
+npm http 200 https://registry.npmjs.org/cssom/0.2.5
+npm http 304 https://registry.npmjs.org/commander/0.6.1
+npm http 200 https://registry.npmjs.org/options/0.0.5
+npm http 200 https://registry.npmjs.org/combined-stream/0.0.4
+npm http 200 https://registry.npmjs.org/nan/0.3.2
+npm http 304 https://registry.npmjs.org/async/0.2.9
+npm http GET https://registry.npmjs.org/tinycolor/-/tinycolor-0.0.1.tgz
+npm http GET https://registry.npmjs.org/cssom/-/cssom-0.2.5.tgz
+npm http GET https://registry.npmjs.org/options/-/options-0.0.5.tgz
+npm http GET https://registry.npmjs.org/combined-stream/-/combined-stream-0.0.4.tgz
+npm http GET https://registry.npmjs.org/nan/-/nan-0.3.2.tgz
+npm WARN package.json formidable@1.0.11 No repository field.
+npm http 200 https://registry.npmjs.org/tinycolor/-/tinycolor-0.0.1.tgz
+npm http GET https://registry.npmjs.org/slide/-/slide-1.1.5.tgz
+npm http GET https://registry.npmjs.org/runforcover/-/runforcover-0.0.2.tgz
+npm http GET https://registry.npmjs.org/nopt/-/nopt-2.1.2.tgz
+npm http GET https://registry.npmjs.org/difflet/-/difflet-0.2.6.tgz
+npm http GET https://registry.npmjs.org/deep-equal/-/deep-equal-0.0.0.tgz
+npm http GET https://registry.npmjs.org/buffer-equal/-/buffer-equal-0.0.0.tgz
+npm http GET https://registry.npmjs.org/mkdirp/0.3.5
+npm http 200 https://registry.npmjs.org/cssom/-/cssom-0.2.5.tgz
+npm http GET https://registry.npmjs.org/hoek/0.9.1
+npm http GET https://registry.npmjs.org/boom/0.4.2
+npm http GET https://registry.npmjs.org/cryptiles/0.2.2
+npm http GET https://registry.npmjs.org/sntp/0.2.4
+npm http 200 https://registry.npmjs.org/asn1/-/asn1-0.1.11.tgz
+npm http 200 https://registry.npmjs.org/contextify/-/contextify-0.1.6.tgz
+npm http 200 https://registry.npmjs.org/ctype/-/ctype-0.5.2.tgz
+npm http 200 https://registry.npmjs.org/assert-plus/-/assert-plus-0.1.2.tgz
+npm http 200 https://registry.npmjs.org/options/-/options-0.0.5.tgz
+npm WARN package.json assert-plus@0.1.2 No repository field.
+npm http 200 https://registry.npmjs.org/runforcover/-/runforcover-0.0.2.tgz
+npm http 200 https://registry.npmjs.org/slide/-/slide-1.1.5.tgz
+npm http 200 https://registry.npmjs.org/nan/-/nan-0.3.2.tgz
+npm http 200 https://registry.npmjs.org/combined-stream/-/combined-stream-0.0.4.tgz
+npm http 200 https://registry.npmjs.org/nopt/-/nopt-2.1.2.tgz
+npm http 200 https://registry.npmjs.org/buffer-equal/-/buffer-equal-0.0.0.tgz
+npm http 200 https://registry.npmjs.org/difflet/-/difflet-0.2.6.tgz
+npm http 200 https://registry.npmjs.org/deep-equal/-/deep-equal-0.0.0.tgz
+npm http 304 https://registry.npmjs.org/mkdirp/0.3.5
+npm http 200 https://registry.npmjs.org/cryptiles/0.2.2
+npm http GET https://registry.npmjs.org/cryptiles/-/cryptiles-0.2.2.tgz
+npm http 200 https://registry.npmjs.org/boom/0.4.2
+npm http GET https://registry.npmjs.org/boom/-/boom-0.4.2.tgz
+npm http 200 https://registry.npmjs.org/hoek/0.9.1
+npm http GET https://registry.npmjs.org/hoek/-/hoek-0.9.1.tgz
+npm http 200 https://registry.npmjs.org/sntp/0.2.4
+npm http GET https://registry.npmjs.org/sntp/-/sntp-0.2.4.tgz
+npm WARN package.json ctype@0.5.2 No repository field.
+npm http GET https://registry.npmjs.org/bunker/-/bunker-0.1.2.tgz
+npm http 200 https://registry.npmjs.org/boom/-/boom-0.4.2.tgz
+npm http 200 https://registry.npmjs.org/cryptiles/-/cryptiles-0.2.2.tgz
+npm http 200 https://registry.npmjs.org/sntp/-/sntp-0.2.4.tgz
+npm http 200 https://registry.npmjs.org/hoek/-/hoek-0.9.1.tgz
+npm http GET https://registry.npmjs.org/abbrev/-/abbrev-1.0.4.tgz
+npm http GET https://registry.npmjs.org/hoek/0.7.6
+npm http GET https://registry.npmjs.org/boom/0.3.8
+npm http GET https://registry.npmjs.org/cryptiles/0.1.3
+npm http GET https://registry.npmjs.org/sntp/0.1.4
+npm http GET https://registry.npmjs.org/traverse/-/traverse-0.6.6.tgz
+npm http GET https://registry.npmjs.org/charm/-/charm-0.1.2.tgz
+npm http GET https://registry.npmjs.org/deep-is/-/deep-is-0.1.2.tgz
+npm http 200 https://registry.npmjs.org/bunker/-/bunker-0.1.2.tgz
+
+> ws@0.4.31 install /home/vagrant/dev/xtuple/node_modules/zombie/node_modules/ws
+> (node-gyp rebuild 2> builderror.log) || (exit 0)
+
+npm http 200 https://registry.npmjs.org/abbrev/-/abbrev-1.0.4.tgz
+npm http 200 https://registry.npmjs.org/cryptiles/0.1.3
+npm http 200 https://registry.npmjs.org/boom/0.3.8
+npm http 200 https://registry.npmjs.org/hoek/0.7.6
+npm http GET https://registry.npmjs.org/cryptiles/-/cryptiles-0.1.3.tgz
+npm http GET https://registry.npmjs.org/boom/-/boom-0.3.8.tgz
+npm http GET https://registry.npmjs.org/hoek/-/hoek-0.7.6.tgz
+npm http 200 https://registry.npmjs.org/sntp/0.1.4
+npm http GET https://registry.npmjs.org/sntp/-/sntp-0.1.4.tgz
+npm http 200 https://registry.npmjs.org/charm/-/charm-0.1.2.tgz
+npm http 200 https://registry.npmjs.org/traverse/-/traverse-0.6.6.tgz
+npm http 200 https://registry.npmjs.org/deep-is/-/deep-is-0.1.2.tgz
+npm http GET https://registry.npmjs.org/source-map/0.1.8
+npm http GET https://registry.npmjs.org/sax/0.5.7
+npm http GET https://registry.npmjs.org/delayed-stream/0.0.5
+npm http 200 https://registry.npmjs.org/hoek/-/hoek-0.7.6.tgz
+npm http 200 https://registry.npmjs.org/sntp/-/sntp-0.1.4.tgz
+npm http 200 https://registry.npmjs.org/boom/-/boom-0.3.8.tgz
+npm http 200 https://registry.npmjs.org/cryptiles/-/cryptiles-0.1.3.tgz
+npm http 200 https://registry.npmjs.org/sax/0.5.7
+npm http 200 https://registry.npmjs.org/source-map/0.1.8
+npm http 200 https://registry.npmjs.org/delayed-stream/0.0.5
+npm http GET https://registry.npmjs.org/sax/-/sax-0.5.7.tgz
+npm http GET https://registry.npmjs.org/source-map/-/source-map-0.1.8.tgz
+npm http GET https://registry.npmjs.org/delayed-stream/-/delayed-stream-0.0.5.tgz
+npm http GET https://registry.npmjs.org/burrito/-/burrito-0.2.12.tgz
+npm http 200 https://registry.npmjs.org/delayed-stream/-/delayed-stream-0.0.5.tgz
+npm http 200 https://registry.npmjs.org/burrito/-/burrito-0.2.12.tgz
+npm http 200 https://registry.npmjs.org/source-map/-/source-map-0.1.8.tgz
+npm http 200 https://registry.npmjs.org/sax/-/sax-0.5.7.tgz
+npm http GET https://registry.npmjs.org/amdefine/0.1.0
+npm http GET https://registry.npmjs.org/uglify-js/-/uglify-js-1.1.1.tgz
+npm http GET https://registry.npmjs.org/traverse/-/traverse-0.5.2.tgz
+npm http 200 https://registry.npmjs.org/amdefine/0.1.0
+npm http GET https://registry.npmjs.org/amdefine/-/amdefine-0.1.0.tgz
+npm http 200 https://registry.npmjs.org/uglify-js/-/uglify-js-1.1.1.tgz
+npm http 200 https://registry.npmjs.org/traverse/-/traverse-0.5.2.tgz
+npm http 200 https://registry.npmjs.org/amdefine/-/amdefine-0.1.0.tgz
+npm http GET https://registry.npmjs.org/bindings/1.1.1
+npm http GET https://registry.npmjs.org/clean-css/1.0.12
+npm http GET https://registry.npmjs.org/source-map/0.1.31
+npm http GET https://registry.npmjs.org/mime/1.2.11
+npm http GET https://registry.npmjs.org/mkdirp/0.3.5
+npm http 200 https://registry.npmjs.org/clean-css/1.0.12
+npm http 200 https://registry.npmjs.org/bindings/1.1.1
+npm http GET https://registry.npmjs.org/bindings/-/bindings-1.1.1.tgz
+npm http GET https://registry.npmjs.org/clean-css/-/clean-css-1.0.12.tgz
+npm http 304 https://registry.npmjs.org/mime/1.2.11
+npm http 304 https://registry.npmjs.org/mkdirp/0.3.5
+npm http 200 https://registry.npmjs.org/source-map/0.1.31
+npm http GET https://registry.npmjs.org/source-map/-/source-map-0.1.31.tgz
+npm http 200 https://registry.npmjs.org/clean-css/-/clean-css-1.0.12.tgz
+npm http 200 https://registry.npmjs.org/bindings/-/bindings-1.1.1.tgz
+npm http 200 https://registry.npmjs.org/source-map/-/source-map-0.1.31.tgz
+
+> contextify@0.1.6 install /home/vagrant/dev/xtuple/node_modules/zombie/node_modules/jsdom/node_modules/contextify
+> node-gyp rebuild
+
+gyp http GET http://nodejs.org/dist/v0.8.26/node-v0.8.26.tar.gz
+npm http GET https://registry.npmjs.org/commander/1.3.2
+gyp http 200 http://nodejs.org/dist/v0.8.26/node-v0.8.26.tar.gz
+npm http 200 https://registry.npmjs.org/commander/1.3.2
+npm http GET https://registry.npmjs.org/commander/-/commander-1.3.2.tgz
+npm http GET https://registry.npmjs.org/amdefine/0.1.0
+npm http 200 https://registry.npmjs.org/commander/-/commander-1.3.2.tgz
+npm http 304 https://registry.npmjs.org/amdefine/0.1.0
+npm http GET https://registry.npmjs.org/keypress/0.1.0
+npm http 304 https://registry.npmjs.org/keypress/0.1.0
+npm http GET https://registry.npmjs.org/cssom/0.3.0
+npm http 200 https://registry.npmjs.org/cssom/0.3.0
+npm http GET https://registry.npmjs.org/cssom/-/cssom-0.3.0.tgz
+npm http GET https://registry.npmjs.org/xmlhttprequest/1.4.2
+npm http GET https://registry.npmjs.org/active-x-obfuscator/0.0.1
+npm http GET https://registry.npmjs.org/uglify-js/1.2.5
+npm http GET https://registry.npmjs.org/ws/0.4.31
+npm http 200 https://registry.npmjs.org/cssom/-/cssom-0.3.0.tgz
+npm http GET https://registry.npmjs.org/png-js/0.1.1
+npm http 200 https://registry.npmjs.org/active-x-obfuscator/0.0.1
+npm http 200 https://registry.npmjs.org/xmlhttprequest/1.4.2
+npm http GET https://registry.npmjs.org/active-x-obfuscator/-/active-x-obfuscator-0.0.1.tgz
+npm http 304 https://registry.npmjs.org/ws/0.4.31
+npm http GET https://registry.npmjs.org/xmlhttprequest/-/xmlhttprequest-1.4.2.tgz
+npm http 200 https://registry.npmjs.org/uglify-js/1.2.5
+npm http GET https://registry.npmjs.org/uglify-js/-/uglify-js-1.2.5.tgz
+npm http 200 https://registry.npmjs.org/png-js/0.1.1
+npm http GET https://registry.npmjs.org/png-js/-/png-js-0.1.1.tgz
+npm http 200 https://registry.npmjs.org/active-x-obfuscator/-/active-x-obfuscator-0.0.1.tgz
+npm http 200 https://registry.npmjs.org/xmlhttprequest/-/xmlhttprequest-1.4.2.tgz
+npm http 200 https://registry.npmjs.org/uglify-js/-/uglify-js-1.2.5.tgz
+npm http 200 https://registry.npmjs.org/png-js/-/png-js-0.1.1.tgz
+make: Entering directory `/home/vagrant/dev/xtuple/node_modules/bcrypt/build'
+  CXX(target) Release/obj.target/bcrypt_lib/src/blowfish.o
+  CXX(target) Release/obj.target/bcrypt_lib/src/bcrypt.o
+npm http GET https://registry.npmjs.org/zeparser/0.0.5
+  CXX(target) Release/obj.target/bcrypt_lib/src/bcrypt_node.o
+npm http 200 https://registry.npmjs.org/zeparser/0.0.5
+npm http GET https://registry.npmjs.org/zeparser/-/zeparser-0.0.5.tgz
+npm http 200 https://registry.npmjs.org/zeparser/-/zeparser-0.0.5.tgz
+make: Entering directory `/home/vagrant/dev/xtuple/node_modules/pg/build'
+  CXX(target) Release/obj.target/binding/src/binding.o
+  SOLINK_MODULE(target) Release/obj.target/bcrypt_lib.node
+  SOLINK_MODULE(target) Release/obj.target/bcrypt_lib.node: Finished
+  COPY Release/bcrypt_lib.node
+npm http GET https://registry.npmjs.org/commander/0.6.1
+npm http GET https://registry.npmjs.org/nan/0.3.2
+npm http GET https://registry.npmjs.org/tinycolor/0.0.1
+npm http GET https://registry.npmjs.org/options/0.0.5
+make: Leaving directory `/home/vagrant/dev/xtuple/node_modules/bcrypt/build'
+npm http 304 https://registry.npmjs.org/commander/0.6.1
+npm http 304 https://registry.npmjs.org/nan/0.3.2
+npm   SOLINK_MODULE(target) Release/obj.target/binding.node
+http 304 https://registry.npmjs.org/tinycolor/0.0.1
+npm http 304 https://registry.npmjs.org/options/0.0.5
+  SOLINK_MODULE(target) Release/obj.target/binding.node: Finished
+  COPY Release/binding.node
+make: Leaving directory `/home/vagrant/dev/xtuple/node_modules/pg/build'
+
+> ws@0.4.31 install /home/vagrant/dev/xtuple/node_modules/socket.io/node_modules/socket.io-client/node_modules/ws
+> (node-gyp rebuild 2> builderror.log) || (exit 0)
+
+make: Entering directory `/home/vagrant/dev/xtuple/node_modules/socket.io/node_modules/socket.io-client/node_modules/ws/build'
+  CXX(target) Release/obj.target/bufferutil/src/bufferutil.o
+  SOLINK_MODULE(target) Release/obj.target/bufferutil.node
+  SOLINK_MODULE(target) Release/obj.target/bufferutil.node: Finished
+  COPY Release/bufferutil.node
+  CXX(target) Release/obj.target/validation/src/validation.o
+  SOLINK_MODULE(target) Release/obj.target/validation.node
+  SOLINK_MODULE(target) Release/obj.target/validation.node: Finished
+  COPY Release/validation.node
+make: Leaving directory `/home/vagrant/dev/xtuple/node_modules/socket.io/node_modules/socket.io-client/node_modules/ws/build'
+npm http GET https://registry.npmjs.org/html5-entities/0.5.0
+npm http GET https://registry.npmjs.org/jsdom/-/jsdom-0.8.10.tgz
+npm http GET https://registry.npmjs.org/opts/1.2.2
+npm http 200 https://registry.npmjs.org/opts/1.2.2
+npm http 200 https://registry.npmjs.org/jsdom/-/jsdom-0.8.10.tgz
+npm http 200 https://registry.npmjs.org/html5-entities/0.5.0
+npm http GET https://registry.npmjs.org/opts/-/opts-1.2.2.tgz
+npm http GET https://registry.npmjs.org/html5-entities/-/html5-entities-0.5.0.tgz
+npm http 200 https://registry.npmjs.org/opts/-/opts-1.2.2.tgz
+npm http 200 https://registry.npmjs.org/html5-entities/-/html5-entities-0.5.0.tgz
+npm WARN package.json opts@1.2.2 No repository field.
+make: Entering directory `/home/vagrant/dev/xtuple/node_modules/zombie/node_modules/ws/build'
+  CXX(target) Release/obj.target/bufferutil/src/bufferutil.o
+npm http GET https://registry.npmjs.org/xmlhttprequest/1.6.0
+npm http GET https://registry.npmjs.org/cssstyle/-/cssstyle-0.2.9.tgz
+npm http GET https://registry.npmjs.org/contextify/0.1.6
+npm http GET https://registry.npmjs.org/cssom/0.3.0
+npm http GET https://registry.npmjs.org/nwmatcher/1.3.1
+npm http GET https://registry.npmjs.org/htmlparser2/-/htmlparser2-3.4.0.tgz
+npm http 200 https://registry.npmjs.org/cssstyle/-/cssstyle-0.2.9.tgz
+npm http 200 https://registry.npmjs.org/xmlhttprequest/1.6.0
+npm http GET https://registry.npmjs.org/xmlhttprequest/-/xmlhttprequest-1.6.0.tgz
+npm http 304 https://registry.npmjs.org/cssom/0.3.0
+npm http 200 https://registry.npmjs.org/htmlparser2/-/htmlparser2-3.4.0.tgz
+npm http 200 https://registry.npmjs.org/nwmatcher/1.3.1
+npm http 304 https://registry.npmjs.org/contextify/0.1.6
+npm http GET https://registry.npmjs.org/nwmatcher/-/nwmatcher-1.3.1.tgz
+  SOLINK_MODULE(target) Release/obj.target/bufferutil.node
+  SOLINK_MODULE(target) Release/obj.target/bufferutil.node: Finished
+  COPY Release/bufferutil.node
+  CXX(target) Release/obj.target/validation/src/validation.o
+  SOLINK_MODULE(target) Release/obj.target/validation.node
+npm http 200 https://registry.npmjs.org/nwmatcher/-/nwmatcher-1.3.1.tgz
+npm http 200 https://registry.npmjs.org/xmlhttprequest/-/xmlhttprequest-1.6.0.tgz
+  SOLINK_MODULE(target) Release/obj.target/validation.node: Finished
+  COPY Release/validation.node
+make: Leaving directory `/home/vagrant/dev/xtuple/node_modules/zombie/node_modules/ws/build'
+npm WARN package.json nwmatcher@1.3.1 No readme data.
+npm http GET https://registry.npmjs.org/bindings/1.1.1
+npm http GET https://registry.npmjs.org/readable-stream/1.1.9
+npm http GET https://registry.npmjs.org/domelementtype/1.1.1
+npm http GET https://registry.npmjs.org/domhandler/-/domhandler-2.2.0.tgz
+npm http GET https://registry.npmjs.org/domutils/-/domutils-1.3.0.tgz
+npm http 304 https://registry.npmjs.org/bindings/1.1.1
+
+> contextify@0.1.6 install /home/vagrant/dev/xtuple/node_modules/html5/node_modules/jsdom/node_modules/contextify
+> node-gyp rebuild
+
+npm http 200 https://registry.npmjs.org/domhandler/-/domhandler-2.2.0.tgz
+npm http 200 https://registry.npmjs.org/domutils/-/domutils-1.3.0.tgz
+npm http 200 https://registry.npmjs.org/domelementtype/1.1.1
+npm http GET https://registry.npmjs.org/domelementtype/-/domelementtype-1.1.1.tgz
+npm http 200 https://registry.npmjs.org/readable-stream/1.1.9
+npm http GET https://registry.npmjs.org/readable-stream/-/readable-stream-1.1.9.tgz
+make: Entering directory `/home/vagrant/dev/xtuple/node_modules/html5/node_modules/jsdom/node_modules/contextify/build'
+  CXX(target) Release/obj.target/contextify/src/contextify.o
+  SOLINK_MODULE(target) Release/obj.target/contextify.node
+  SOLINK_MODULE(target) Release/obj.target/contextify.node: Finished
+  COPY Release/contextify.node
+make: Leaving directory `/home/vagrant/dev/xtuple/node_modules/html5/node_modules/jsdom/node_modules/contextify/build'
+npm http 200 https://registry.npmjs.org/readable-stream/-/readable-stream-1.1.9.tgz
+npm http 200 https://registry.npmjs.org/domelementtype/-/domelementtype-1.1.1.tgz
+npm http GET https://registry.npmjs.org/core-util-is/1.0.0
+npm http GET https://registry.npmjs.org/debuglog/0.0.2
+npm http 200 https://registry.npmjs.org/debuglog/0.0.2
+npm http 200 https://registry.npmjs.org/core-util-is/1.0.0
+npm http GET https://registry.npmjs.org/debuglog/-/debuglog-0.0.2.tgz
+npm http GET https://registry.npmjs.org/core-util-is/-/core-util-is-1.0.0.tgz
+npm http 200 https://registry.npmjs.org/core-util-is/-/core-util-is-1.0.0.tgz
+npm http 200 https://registry.npmjs.org/debuglog/-/debuglog-0.0.2.tgz
+make: Entering directory `/home/vagrant/dev/xtuple/node_modules/zombie/node_modules/jsdom/node_modules/contextify/build'
+  CXX(target) Release/obj.target/contextify/src/contextify.o
+  SOLINK_MODULE(target) Release/obj.target/contextify.node
+  SOLINK_MODULE(target) Release/obj.target/contextify.node: Finished
+  COPY Release/contextify.node
+make: Leaving directory `/home/vagrant/dev/xtuple/node_modules/zombie/node_modules/jsdom/node_modules/contextify/build'
+require-uncache@0.0.2 node_modules/require-uncache
+
+connect-ensure-login@0.1.1 node_modules/connect-ensure-login
+
+colors@0.6.2 node_modules/colors
+
+async@0.2.9 node_modules/async
+
+backbone-relational@0.8.0 node_modules/backbone-relational
+
+backbone@0.9.10 node_modules/backbone
+
+json-patch@0.0.1 node_modules/json-patch
+
+underscore@1.4.4 node_modules/underscore
+
+congruence@1.2.4 node_modules/congruence
+└── underscore@1.5.2
+
+ejs@0.8.5 node_modules/ejs
+
+chai@1.5.0 node_modules/chai
+
+xtuple-query@1.0.0 node_modules/xtuple-query
+├── underscore@1.5.2
+└── congruence@1.2.3
+
+commander@1.2.0 node_modules/commander
+└── keypress@0.1.0
+
+rimraf@2.2.4 node_modules/rimraf
+└── graceful-fs@2.0.1
+
+passport-oauth2-jwt-bearer@0.1.1 node_modules/passport-oauth2-jwt-bearer
+└── pkginfo@0.2.3
+
+oauth2orize@0.1.0 node_modules/oauth2orize
+└── debug@0.7.4
+
+underscore.string@2.3.3 node_modules/underscore.string
+
+passport@0.1.17 node_modules/passport
+├── pause@0.0.1
+└── pkginfo@0.2.3
+
+passport-http-bearer@0.2.1 node_modules/passport-http-bearer
+└── pkginfo@0.2.3
+
+passport-local@0.1.6 node_modules/passport-local
+└── pkginfo@0.2.3
+
+oauth2orize-jwt-bearer@0.1.0 node_modules/oauth2orize-jwt-bearer
+└── pkginfo@0.2.3
+
+rjson@0.2.4 node_modules/rjson
+└── commander@1.1.1 (keypress@0.1.0)
+
+request@2.14.0 node_modules/request
+
+passport-oauth2-client-password@0.1.1 node_modules/passport-oauth2-client-password
+└── pkginfo@0.2.3
+
+passport-http@0.2.2 node_modules/passport-http
+└── pkginfo@0.2.3
+
+mocha@1.9.0 node_modules/mocha
+├── debug@0.7.4
+├── growl@1.7.0
+├── commander@0.6.1
+├── diff@1.0.2
+├── mkdirp@0.3.3
+├── ms@0.3.0
+└── jade@0.26.3 (mkdirp@0.3.0)
+
+moment@2.4.0 node_modules/moment
+
+express@3.1.2 node_modules/express
+├── methods@0.0.1
+├── fresh@0.1.0
+├── range-parser@0.0.4
+├── cookie-signature@1.0.0
+├── debug@0.7.4
+├── buffer-crc32@0.2.1
+├── cookie@0.0.5
+├── commander@0.6.1
+├── mkdirp@0.3.5
+├── send@0.1.0 (mime@1.2.6)
+└── connect@2.7.5 (pause@0.0.1, bytes@0.2.0, buffer-crc32@0.1.1, formidable@1.0.11, qs@0.5.1)
+
+winston@0.7.2 node_modules/winston
+├── cycle@1.0.2
+├── stack-trace@0.0.7
+├── eyes@0.1.8
+├── pkginfo@0.3.0
+└── request@2.16.6 (aws-sign@0.2.0, forever-agent@0.2.0, oauth-sign@0.2.0, tunnel-agent@0.2.0, json-stringify-safe@3.0.0, cookie-jar@0.2.0, node-uuid@1.4.1, mime@1.2.11, qs@0.5.6, hawk@0.10.2, form-data@0.0.10)
+
+xmla4js@0.0.1 node_modules/xmla4js
+
+nodemailer@0.3.44 node_modules/nodemailer
+├── optimist@0.6.0 (wordwrap@0.0.2, minimist@0.0.5)
+├── simplesmtp@0.3.16 (xoauth2@0.1.8, rai@0.1.8)
+└── mailcomposer@0.2.6 (dkim-signer@0.1.0, mime@1.2.9, punycode@1.2.3, he@0.3.6, mimelib@0.2.14)
+
+paynode@0.3.6 node_modules/paynode
+└── braintree@1.9.2 (dateformat@1.0.1-1.2.3, underscore@1.3.1, source-map-support@0.1.2, xml2js@0.1.13)
+
+googleapis@0.4.7 node_modules/googleapis
+├── async@0.2.6
+├── request@2.25.0 (json-stringify-safe@5.0.0, forever-agent@0.5.0, oauth-sign@0.3.0, aws-sign@0.3.0, qs@0.6.6, tunnel-agent@0.3.0, cookie-jar@0.3.0, node-uuid@1.4.1, mime@1.2.11, hawk@1.0.0, form-data@0.1.2, http-signature@0.10.0)
+└── gapitoken@0.1.0 (jws@0.0.2)
+
+less@1.5.0 node_modules/less
+├── mime@1.2.11
+├── mkdirp@0.3.5
+├── source-map@0.1.31 (amdefine@0.1.0)
+└── clean-css@1.0.12 (commander@1.3.2)
+
+bcrypt@0.7.7 node_modules/bcrypt
+└── bindings@1.0.0
+
+pg@0.14.1 node_modules/pg
+├── deprecate@0.1.0
+└── generic-pool@2.0.4
+
+fluentreports@0.0.2 node_modules/fluentreports
+└── pdfkit@0.2.6 (png-js@0.1.1)
+
+socket.io@0.9.16 node_modules/socket.io
+├── base64id@0.1.0
+├── policyfile@0.0.4
+├── redis@0.7.3
+└── socket.io-client@0.9.16 (xmlhttprequest@1.4.2, uglify-js@1.2.5, ws@0.4.31, active-x-obfuscator@0.0.1)
+
+html5@0.3.13 node_modules/html5
+├── html5-entities@0.5.0
+├── opts@1.2.2
+└── jsdom@0.8.10 (xmlhttprequest@1.6.0, cssom@0.3.0, nwmatcher@1.3.1, contextify@0.1.6, cssstyle@0.2.9, htmlparser2@3.4.0)
+
+zombie@1.4.1 node_modules/zombie
+├── q@0.8.12
+├── mime@1.2.11
+├── eventsource@0.0.10
+├── ms@0.1.0
+├── request@2.10.0
+├── tough-cookie@0.9.15 (punycode@1.2.3)
+├── ws@0.4.31 (tinycolor@0.0.1, options@0.0.5, commander@0.6.1, nan@0.3.2)
+└── jsdom@0.2.19 (cssom@0.2.5, htmlparser@1.7.7, cssstyle@0.2.9, contextify@0.1.6)
+setup_postgres()
+copying configs...
+restarting postgres...
+dropping existing db, if any...
+determining latest version...
+Changing directory to /usr/local/src/postgres
+using: 4.3.0
+Setup database
+pg_restore: [archiver (db)] Error while PROCESSING TOC:
+pg_restore: [archiver (db)] Error from TOC entry 4017; 2612 1681597 PROCEDURAL LANGUAGE plpgsql admin
+pg_restore: [archiver (db)] could not execute query: ERROR:  language "plpgsql" already exists
+    Command was: CREATE PROCEDURAL LANGUAGE plpgsql;
+
+
+
+WARNING: errors ignored on restore: 1
+CREATE EXTENSION
+init_everythings()
+Setting properties of admin user
+Changing directory to /home/vagrant/dev/xtuple/node-datasource
+Configured node-datasource
+The database is now set up...
+Changing directory to /home/vagrant/dev/xtuple/node-datasource/lib/private
+Created salt
+Generating RSA private key, 1024 bit long modulus
+.................................................++++++
+........++++++
+e is 65537 (0x10001)
+writing RSA key
+Signature ok
+subject=/CN=precise64
+Getting Private key
+Changing directory to /home/vagrant/dev/xtuple/test/lib
+Created testing login_data.js
+Changing directory to /home/vagrant/dev/xtuple
+building client core
+building crm
+building project
+building sales
+building billing
+building purchasing
+info: Applying build to database dev
+info: Success installing all scripts.
+info: Cleaning up.
+Build succeeded.
+Database: dev
+Directories:
+  /home/vagrant/dev/xtuple/lib/orm
+  /home/vagrant/dev/xtuple/enyo-client
+  /home/vagrant/dev/xtuple/enyo-client/extensions/source/crm
+  /home/vagrant/dev/xtuple/enyo-client/extensions/source/project
+  /home/vagrant/dev/xtuple/enyo-client/extensions/source/sales
+  /home/vagrant/dev/xtuple/enyo-client/extensions/source/billing
+  /home/vagrant/dev/xtuple/enyo-client/extensions/source/purchasing
+
+INSERT 0 5
+You can login to the database and mobile client with:
+username: admin
+password: admin
+Installation now finished.
+Run the following commands to start the datasource:
+cd node-datasource
+node main.js
+All Done!
