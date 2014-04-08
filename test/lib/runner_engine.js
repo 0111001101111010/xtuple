@@ -159,7 +159,7 @@ require:true, __dirname:true, console:true */
             _.each(spec.extensions, function (extension) {
               it("has privilege " + priv + " declared by the " + extension + " extension", function () {
                 assert.isDefined(_.findWhere(XT.session.relevantPrivileges,
-                  {privilege: priv, module: extension}));
+                  {privilege: priv, module: spec.relevantPrivilegeModule || extension}));
               });
             });
             /*
@@ -186,6 +186,7 @@ require:true, __dirname:true, console:true */
         //
         _.each(spec.privileges, function (priv, key) {
           var methodMap = {
+              createReadUpdateDelete: ["canCreate", "canRead", "canUpdate", "canDelete"],
               createUpdateDelete: ["canCreate", "canUpdate", "canDelete"],
               createUpdate: ["canCreate", "canUpdate"],
               create: ["canCreate"],

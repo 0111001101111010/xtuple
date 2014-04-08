@@ -13,6 +13,7 @@ DROP TABLE IF EXISTS xt.useruserrole CASCADE;
 DROP TABLE IF EXISTS xt.usrorg CASCADE;
 DROP TABLE IF EXISTS xt.filter CASCADE;
 DROP TABLE IF EXISTS xt.remitto CASCADE;
+DROP TABLE IF EXISTS xt.bicache CASCADE;
 DROP VIEW IF EXISTS xt.usr CASCADE;
 DROP FUNCTION IF EXISTS xt.createuser(text, boolean);
 DROP FUNCTION IF EXISTS xt.user_account_sync(text);
@@ -61,3 +62,5 @@ DO $$
     plv8.execute("ALTER TABLE xt.obj ALTER COLUMN obj_uuid SET DEFAULT xt.uuid_generate_v4();");
   }
 $$ language plv8;
+
+

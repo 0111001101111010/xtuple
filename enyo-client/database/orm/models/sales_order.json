@@ -29,6 +29,15 @@
           "create": "AlterPackDate",
           "update": "AlterPackDate"
         }
+      },
+      "personal": {
+        "create": false,
+        "read": "ViewPersonalCRMAccounts",
+        "update": false,
+        "delete": false,
+        "properties": [
+          "crmaccountUsers"
+        ]
       }
     },
     "properties": [
@@ -652,6 +661,14 @@
           "inverse": "salesOrder",
           "isNested": true
         }
+      },
+      {
+        "name": "crmaccountUsers",
+        "toMany": {
+          "type": "ShareUsers",
+          "column": "obj_uuid",
+          "inverse": "uuid"
+        }
       }
     ],
     "isSystem": true
@@ -1273,6 +1290,14 @@
         }
       },
       {
+        "name": "subNumber",
+        "attr": {
+          "type": "Number",
+          "column": "coitem_subnumber",
+          "required": true
+        }
+      },
+      {
         "name": "item",
         "toOne": {
           "required": true,
@@ -1450,14 +1475,6 @@
         "toOne": {
           "type": "Item",
           "column": "coitem_substitute_item_id"
-        }
-      },
-      {
-        "name": "subnumber",
-        "attr": {
-          "type": "Number",
-          "column": "coitem_subnumber",
-          "required": true
         }
       },
       {

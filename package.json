@@ -2,7 +2,7 @@
   "author": "xTuple <dev@xtuple.com>",
   "name": "xtuple",
   "description": "xTuple Enterprise Resource Planning Mobile-Web client",
-  "version": "1.7.2",
+  "version": "4.4.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/xtuple/xtuple.git"
@@ -14,11 +14,12 @@
     "bcrypt": "0.7.x",
     "colors": "0.6.x",
     "commander": "1.2.x",
-    "congruence": "1.2.4",
+    "congruence": "~1.2.4",
     "connect-ensure-login": "0.1.x",
     "ejs": "0.8.x",
     "express": "3.1.x",
     "fluentreports": "git://github.com/xtuple/fluentreports.git",
+    "ipp": "0.0.5",
     "json-patch": "git://github.com/xtuple/JSON-Patch.git",
     "less": "1.5.0",
     "moment": "2.4.x",
@@ -39,16 +40,19 @@
     "socket.io": "0.9.x",
     "underscore": "1.4.x",
     "winston": "0.7.x",
-    "xmla4js": "git://github.com/rpbouman/xmla4js.git",
+    "xmla4js": "git://github.com/rpbouman/xmla4js.git#c4724843",
     "underscore.string": "~2.3.3",
-    "congruence": "~1.2.4"
+    "ursa":"0.8.x"
   },
   "devDependencies": {
     "chai": "1.5.x",
+    "jshint": "2.4.x",
     "mocha": "1.9.x",
     "require-uncache": "0.0.x",
     "html5": "0.3.13",
-    "zombie": "1.4.x"
+    "zombie": "1.4.x",
+    "csslint": "~0.10.0",
+    "nodemon": "~1.0.15"
   },
   "optionalDependencies": {
     "xtuple-query": "~1.0.0",
@@ -59,7 +63,13 @@
   },
   "main": "node-datasource/main.js",
   "scripts": {
+    "build-qt-updater-sql": "./scripts/explode_manifest.js -m foundation-database/safe_toolkit_manifest.js -n toolkit.sql; ./scripts/explode_manifest.js -m foundation-database/manifest.js -n updates.sql",
+    "build-qt-empty": "./scripts/build_app.js -d empty --databaseonly -e foundation-database -i -s foundation-database/empty_data.sql",
+    "build-qt-postbooks-demo": "./scripts/build_app.js -d postbooks_demo --databaseonly -e foundation-database -i -s foundation-database/postbooks_demo_data.sql",
+    "build-qt-quickstart": "./scripts/build_app.js -d quickstart --databaseonly -e foundation-database -i -s foundation-database/quickstart_data.sql",
+    "jshint": "./node_modules/.bin/jshint --exclude node-datasource/lib/query/node_modules lib/backbone-x/source lib/enyo-x/source lib/tools/source enyo-client/application/source/ enyo-client/extensions node-datasource",
     "preinstall": "cd node-datasource/lib/query ; npm install",
+    "start": "node_modules/.bin/nodemon node-datasource/main.js --debug --watch node-datasource",
     "test-build": "./node_modules/.bin/mocha -R spec test/build/build_app.js",
     "test": "./node_modules/.bin/mocha -R spec test/lib/login.js test/models/* test/database/* test/extensions/* test/lib/test_runner.js",
     "test-datasource": "./node_modules/.bin/mocha -R spec test/routes/*"

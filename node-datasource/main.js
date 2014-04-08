@@ -3,6 +3,7 @@
 /*jshint node:true, indent:2, curly:false, eqeqeq:true, immed:true, latedef:true, newcap:true, noarg:true,
 regexp:true, undef:true, strict:true, trailing:true, white:true */
 /*global X:true, Backbone:true, _:true, XM:true, XT:true, SYS:true, jsonpatch:true*/
+process.chdir(__dirname);
 
 Backbone = require("backbone");
 _ = require("underscore");
@@ -70,6 +71,7 @@ XT = { };
   var datasource = require("./lib/ext/datasource");
   require("./lib/ext/models");
   require("./lib/ext/smtp_transport");
+
   datasource.setupPgListeners(X.options.datasource.databases, {
     email: X.smtpTransport.sendMail
   });
@@ -81,7 +83,7 @@ XT = { };
 
   // load the encryption key, or create it if it doesn't exist
   // it should created just once, the very first time the datasoruce starts
-  var encryptionKeyFilename = './lib/private/encryption_key.txt';
+  var encryptionKeyFilename = X.options.datasource.encryptionKeyFile || './lib/private/encryption_key.txt';
   X.fs.exists(encryptionKeyFilename, function (exists) {
     if (exists) {
       X.options.encryptionKey = X.fs.readFileSync(encryptionKeyFilename, "utf8");
@@ -350,9 +352,10 @@ app.get('/:org/discovery/v1alpha1/apis', routes.restDiscoveryList);
 
 app.get('/:org/api/userinfo', user.info);
 
-app.all('/:org/api/v1alpha1/:model/:id', routes.restRouter);
-app.all('/:org/api/v1alpha1/:model', routes.restRouter);
-app.all('/:org/api/v1alpha1/*', routes.restRouter);
+app.post('/:org/api/v1alpha1/services/:service/:id', routes.restRouter);
+app.all('/:org/api/v1alpha1/resources/:model/:id', routes.restRouter);
+app.all('/:org/api/v1alpha1/resources/:model', routes.restRouter);
+app.all('/:org/api/v1alpha1/resources/*', routes.restRouter);
 
 app.get('/', routes.loginForm);
 app.post('/login', routes.login);
@@ -371,14 +374,14 @@ app.get('/:org/analysis', routes.analysis);
 app.all('/:org/credit-card', routes.creditCard);
 app.all('/:org/change-password', routes.changePassword);
 app.all('/:org/client/build/client-code', routes.clientCode);
-app.all('/:org/data-from-key', routes.dataFromKey);
 app.all('/:org/email', routes.email);
 app.all('/:org/export', routes.exxport);
 app.get('/:org/file', routes.file);
+app.all('/:org/oauth/generate-key', routes.generateOauthKey);
 app.get('/:org/generate-report', routes.generateReport);
 app.get('/:org/locale', routes.locale);
-app.get('/:org/report', routes.report);
 app.get('/:org/reset-password', routes.resetPassword);
+app.post('/:org/oauth/revoke-token', routes.revokeOauthToken);
 app.get('/:org/queryOlap', routes.queryOlapCatalog);
 app.all('/:org/vcfExport', routes.vcfExport);
 
@@ -607,7 +610,7 @@ io.of('/clientsock').authorization(function (handshakeData, callback) {
           debugging: X.options.datasource.debugging,
           biAvailable: _.isObject(X.options.biServer) && !_.isEmpty(X.options.biServer),
           emailAvailable: _.isString(X.options.datasource.smtpHost) && X.options.datasource.smtpHost !== "",
-          printAvailable: false,
+          printAvailable: _.isString(X.options.datasource.printer) && X.options.datasource.printer !== "",
           version: X.version
         });
       callback(callbackObj);

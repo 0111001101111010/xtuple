@@ -35,16 +35,16 @@ regexp:true, undef:true, strict:true, trailing:true, white:true */
     exxport = require('./export'),
     data = require('./data'),
     olapData = require('./olapdata'),
-    dataFromKey = require('./data_from_key'),
     file = require('./file'),
     generateReport = require('./generate_report'),
+    generateOauthKey = require('./generate_oauth_key'),
     locale = require('./locale'),
     //passport = require('passport'),
     redirector = require('./redirector'),
-    report = require('./report'),
     recover = require('./recover'),
     restDiscovery = require('./restDiscovery'),
     restRouter = require('./restRouter'),
+    revokeOauthToken = require('./revoke_oauth_token'),
     vcfExport = require('./vcfExport');
 
   //
@@ -95,16 +95,16 @@ regexp:true, undef:true, strict:true, trailing:true, white:true */
   exports.creditCard = [ensureLogin, authorizeNet.transact];
   exports.changePassword = [ensureLogin, changePassword.changePassword];
   exports.clientCode = [ensureLogin, clientCode.clientCode];
-  exports.dataFromKey = dataFromKey.dataFromKey; // don't authenticate
   exports.email = [ensureLogin, email.email];
   exports.exxport = [ensureLogin, exxport.exxport];
   exports.file = [ensureLogin, file.file];
+  exports.generateOauthKey = [ensureLogin, generateOauthKey.generateKey];
   exports.generateReport = [ensureLogin, generateReport.generateReport];
   exports.locale = [ensureLogin, locale.locale];
   exports.redirect = redirector.redirect;
-  exports.report = [ensureLogin, report.report];
   exports.analysis = [ensureLogin, analysis.analysis];
   exports.resetPassword = [ensureLogin, changePassword.resetPassword];
+  exports.revokeOauthToken = [ensureLogin, revokeOauthToken.revokeToken];
   exports.vcfExport = [ensureLogin, vcfExport.vcfExport];
 
 }());

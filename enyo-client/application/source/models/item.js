@@ -12,11 +12,18 @@ white:true*/
   XM.ItemMixin = {
 
     /**
+      Deprecated. Use `formatItemType`.
+    */
+    getItemTypeString: function () {
+      return this.formatItemType();
+    },
+
+    /**
     Returns item type as a localized string.
 
     @returns {String}
     */
-    getItemTypeString: function () {
+    formatItemType: function () {
       var K = XM.Item,
         itemType = this.get('itemType');
       switch (itemType)
@@ -170,6 +177,20 @@ white:true*/
   /**
     @class
 
+    @extends XM.Info
+  */
+  XM.ItemGroupRelation = XM.Info.extend({
+    /** @scope XM.ItemGroupRelation.prototype */
+
+    recordType: 'XM.ItemGroupRelation',
+
+    editableModel: "XM.ItemGroup"
+
+  });
+
+  /**
+    @class
+
     @extends XM.Model
   */
   XM.ItemGroupItem = XM.Model.extend({
@@ -243,7 +264,8 @@ white:true*/
         isFractional: false,
         isSold: true,
         itemType: XM.Item.PURCHASED,
-        listPrice: 0
+        listPrice: 0,
+        isExclusive: false
       };
     },
 
@@ -572,7 +594,9 @@ white:true*/
   XM.ItemItemSiteRelation = XM.Model.extend({
     /** @scope XM.ItemItemSiteRelation.prototype */
 
-    recordType: 'XM.ItemItemSiteRelation'
+    recordType: 'XM.ItemItemSiteRelation',
+
+    editableModel: 'XM.ItemSite'
 
   });
 
@@ -598,13 +622,32 @@ white:true*/
     },
 
     useDescriptionDidChange: function () {
+      var noDescription = !this.get("useDescription");
+
       // clear out the description if we don't use it
-      if (!this.get("useDescription") && this.get("description1")) {
-        this.set({description1: ""});
+      if (noDescription) {
+        this.set({
+          description1: "",
+          description2: ""
+        });
       }
-      this.setReadOnly("description1", !this.get("useDescription"));
+      this.setReadOnly(
+        ["description1", "description2"],
+        noDescription
+      );
     }
 
+  });
+
+  /**
+    @class
+
+    @extends XM.Model
+  */
+  XM.ItemRelationAlias = XM.Model.extend({
+    /** @scope XM.ItemRelationAlias.prototype */
+
+    recordType: 'XM.ItemRelationAlias',
 
   });
 
@@ -744,10 +787,10 @@ white:true*/
 
    @extends XM.Collection
   */
-  XM.ItemGroupCollection = XM.Collection.extend({
-   /** @scope XM.ItemGroupCollection.prototype */
+  XM.ItemGroupRelationCollection = XM.Collection.extend({
+   /** @scope XM.ItemGroupRelationCollection.prototype */
 
-    model: XM.ItemGroup
+    model: XM.ItemGroupRelation
 
   });
 

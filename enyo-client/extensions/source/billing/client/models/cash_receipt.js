@@ -24,8 +24,7 @@ XT.extensions.billing.initCashReceipt = function () {
         documentDate: new Date(),
         amount: 0,
         appliedAmount: 0,
-        balance: 0,
-        lineItems: new XM.CashReceiptLineCollection()
+        balance: 0
       };
     },
 
@@ -57,7 +56,7 @@ XT.extensions.billing.initCashReceipt = function () {
 
     /**
      * XXX error if i try to override this method
-     * Uncaught TypeError: Cannot read property 'patches' of null 
+     * Uncaught TypeError: Cannot read property 'patches' of null
      *
     toJSON: function () {
       console.log(this.attributes);
@@ -110,7 +109,7 @@ XT.extensions.billing.initCashReceipt = function () {
      */
     onReadyClean: function (model) {
       /*
-       * TODO re-enable 
+       * TODO re-enable
       this.setReadOnly(this.get('isPosted'));
       */
       this.setReadOnly([
@@ -182,7 +181,7 @@ XT.extensions.billing.initCashReceipt = function () {
         return callback(true);
       }
 
-      bankAccountCurrency = bankAccount.get('currency').get('abbreviation'),
+      bankAccountCurrency = bankAccount.get('currency').get('abbreviation');
       cashReceiptCurrency = this.get('currency').get('abbreviation');
 
       if (bankAccountCurrency !== cashReceiptCurrency && this.meta.get('currencyWarning')) {
@@ -267,7 +266,7 @@ XT.extensions.billing.initCashReceipt = function () {
               }
             });
         },
-        
+
         /**
          * 3. Fetch/lock Receivable to edit, ensure lock is acquired, pass
          * back to caller.
@@ -298,7 +297,7 @@ XT.extensions.billing.initCashReceipt = function () {
      */
     applyLineBalance: function (_receivable, callback) {
       var that = this, options = {
-        
+
         /**
          * @callback
          * Apply line balance once preconditions are met
@@ -512,14 +511,6 @@ XT.extensions.billing.initCashReceipt = function () {
    */
   XM.CashReceiptRelationCollection = XM.Collection.extend({
     model: XM.CashReceiptRelation
-  });
-
-  /**
-   * @class XM.CashReceiptCollection
-   * @extends XM.Collection
-   */
-  XM.CashReceiptLineCollection = XM.Collection.extend({
-    model: XM.CashReceiptLine
   });
 
   /**

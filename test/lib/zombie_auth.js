@@ -111,6 +111,9 @@ Simplest possible usage:
     };
 
     zombie.visit(host, {debug: verboseMode}, function (e, browser) {
+      if (e) {
+        console.log("Zombie visit error: ", e);
+      }
       //
       // This is the login screen
       //
@@ -171,6 +174,7 @@ Simplest possible usage:
               };
               */
               // WIP. Not yet working. Probably need to move it up to earlier app start status.
+              /*
               var oldLoc = XT.String.loc;
               XT.String.loc = function (str) {
                 var localized = XT.localizeString(str);
@@ -180,6 +184,7 @@ Simplest possible usage:
                   oldLoc(str);
                 }
               };
+              */
 
               // these are really annoying
               browser.window.Backbone.Relational.showWarnings = false;

@@ -28,6 +28,11 @@ noarg:true, regexp:true, undef:true, strict:true, trailing:true, white:true */
       query.orderby = query.orderBy;
       delete query.orderBy;
     }
+    // Allow mixed case rowLimit.
+    if (query.rowLimit) {
+      query.rowlimit = query.rowLimit;
+      delete query.rowLimit;
+    }
     // Allow mixed case maxResults.
     if (query.maxResults) {
       query.maxresults = query.maxResults;
@@ -52,6 +57,8 @@ noarg:true, regexp:true, undef:true, strict:true, trailing:true, white:true */
       value: {
         '(?)attributes': {
           '(+)': _.or(
+            { ANY:           _.isDefined },
+            { NOT_ANY:       _.isDefined },
             { EQUALS:        _.isDefined },
             { NOT_EQUALS:    _.isDefined },
             { MATCHES:       _.isString },
@@ -65,6 +72,7 @@ noarg:true, regexp:true, undef:true, strict:true, trailing:true, white:true */
         '(?)orderby': {
           '(+)': _.or(_.isFinite, /ASC/i, /DESC/i)
         },
+        '(?)rowlimit': _.isFinite,
         '(?)maxresults': _.isFinite,
         '(?)pagetoken': _.isFinite,
         '(?)count': function (count) {
@@ -79,6 +87,8 @@ noarg:true, regexp:true, undef:true, strict:true, trailing:true, white:true */
      */
     operators: {
       value: {
+        ANY:          'ANY',
+        NOT_ANY:      'NOT ANY',
         EQUALS:       '=',
         NOT_EQUALS:   '!=',
         LESS_THAN:    '<',
@@ -139,7 +149,7 @@ noarg:true, regexp:true, undef:true, strict:true, trailing:true, white:true */
         };
       }),
       rowOffset: (+source.pagetoken || 0) * (+source.maxresults || 100),
-      rowLimit: (+source.maxresults || 100),
+      rowLimit: ((+source.maxresults || +source.rowlimit) || 100),
     };
     return _.compactObject(target);
   }

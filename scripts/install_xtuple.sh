@@ -21,6 +21,7 @@ cdir() {
 	log "Changing directory to $1"
 }
 
+PG_VERSION=9.1
 DATABASE=dev
 RUNALL=true
 XT_VERSION=
@@ -29,8 +30,12 @@ LIBS_ONLY=
 XT_DIR=$RUN_DIR
 XTUPLE_REPO='http://sourceforge.net/projects/postbooks/files/mobile-debian'
 
-while getopts ":ipnhmx-:" opt; do
+while getopts ":d:ipnhmx-:" opt; do
   case $opt in
+    d)
+      PG_VERSION=$OPTARG
+      echo $PG_VERSION
+      ;;
     i)
       # Install packages
       RUNALL=
@@ -119,6 +124,11 @@ install_packages() {
   sudo nvm use $NODE_VERSION
   sudo nvm alias default $NODE_VERSION
   sudo nvm alias xtuple $NODE_VERSION
+
+	// npm no longer supports its self-signed certificates
+	log "telling npm to use known registrars..."
+	npm config set ca ""
+
   log "installing npm modules..."
   npm install --unsafe-perm 2>&1 | tee -a $LOG_FILE
 }
@@ -166,34 +176,11 @@ setup_postgres() {
   log "dropping existing db, if any..."
 	sudo -u postgres dropdb $DATABASE
 
-  log "determining latest version..."
-
 	cdir $BASEDIR/postgres
-    NEWESTVERSION="4.3.0"
 
-  log "using: $NEWESTVERSION"
-
-	if [ ! -f postbooks_demo-$NEWESTVERSION.backup ]
-	then
-		sudo wget -qO postbooks_demo-$NEWESTVERSION.backup http://sourceforge.net/projects/postbooks/files/03%20PostBooks-databases/$NEWESTVERSION/postbooks_demo-$NEWESTVERSION.backup/download
-		sudo wget -qO init.sql http://sourceforge.net/projects/postbooks/files/03%20PostBooks-databases/4.2.1/init.sql/download
-		wait
-		if [ ! -f postbooks_demo-$NEWESTVERSION.backup ]
-		then
-			log "Failed to download files from sourceforge."
-			log "Download the postbooks demo database and init.sql from sourceforge into"
-			log "$BASEDIR/postgres then run 'install_xtuple -pn' to finish installing this package."
-			return 3
-		fi
-	fi
-
-	log "Setup database"
-
+  log "Setup database"
+    sudo wget -qO init.sql http://sourceforge.net/projects/postbooks/files/03%20PostBooks-databases/4.2.1/init.sql/download
 	sudo -u postgres psql -q -f 'init.sql' 2>&1 | tee -a $LOG_FILE
-	sudo -u postgres createdb -O admin $DATABASE 2>&1 | tee -a $LOG_FILE
-	sudo -u postgres pg_restore -d $DATABASE postbooks_demo-$NEWESTVERSION.backup 2>&1 | tee -a $LOG_FILE
-	sudo -u postgres psql $DATABASE -c "CREATE EXTENSION plv8" 2>&1 | tee -a $LOG_FILE
-  cp postbooks_demo-$NEWESTVERSION.backup $XT_DIR/test/lib/demo-test.backup
 }
 
 init_everythings() {
@@ -224,8 +211,7 @@ init_everythings() {
 	log "Created testing login_data.js"
 
 	cdir $XT_DIR
-	node scripts/build_app.js -d $DATABASE 2>&1 | tee -a $LOG_FILE
-	sudo -u postgres psql -w $DATABASE -c "select xt.js_init(); insert into xt.usrext (usrext_usr_username, usrext_ext_id) select 'admin', ext_id from xt.ext where ext_location = '/core-extensions';" 2>&1 | tee -a $LOG_FILE
+	npm run-script test-build 2>&1 | tee -a $LOG_FILE
 
 	log "You can login to the database and mobile client with:"
 	log "  username: admin"

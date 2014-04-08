@@ -50,7 +50,7 @@ setTimeout:true, before:true, clearTimeout:true, exports:true, it:true, describe
         itemInitialized = function (submodels) {
           var unitUpdated = function () {
             // make sure all the fields we need to save successfully have been calculated
-            if (lineItem.get("price") &&
+            if ((lineRecordType === "XM.PurchaseOrderLine" || lineItem.get("price")) &&
                 (!_.contains(lineItem.getAttributeNames(), "customerPrice") || lineItem.get("customerPrice"))) {
 
               //lineItem.off("all", unitUpdated);
@@ -70,6 +70,7 @@ setTimeout:true, before:true, clearTimeout:true, exports:true, it:true, describe
             return curr.get("isBase");
           });
           data.model.set({currency: currency});
+          lineItem.setIfExists({dueDate: new Date()});
           lineItem.setIfExists({quantity: 7});
           lineItem.setIfExists({billed: 7});
           lineItem.setIfExists({credited: 7});
@@ -94,7 +95,6 @@ setTimeout:true, before:true, clearTimeout:true, exports:true, it:true, describe
   */
   var spec = {
     recordType: "XM.SalesOrder",
-    skipSmoke: true, // XXX TODO get rid of this
     collectionType: "XM.SalesOrderListItemCollection",
     cacheName: null,
     listKind: "XV.SalesOrderList",
@@ -131,10 +131,8 @@ setTimeout:true, before:true, clearTimeout:true, exports:true, it:true, describe
       read: "ViewSalesOrders"
     },
     createHash: {
-      calculateFreight: true,
       customer: { number: "TTOYS" },
-      terms: { code: "2-10N30" },
-      wasQuote: true
+      terms: { code: "2-10N30" }
     },
     //
     // An extra bit of work we have to do after the createHash fields are set:
@@ -151,8 +149,24 @@ setTimeout:true, before:true, clearTimeout:true, exports:true, it:true, describe
         .get("number").substring(0, 12), "************");
       next();
     }}],
+    beforeSaveUIActions: [{it: 'sets up a valid line item',
+      action: function (workspace, done) {
+        var gridRow;
+
+        primeSubmodels(function (submodels) {
+          workspace.$.salesOrderLineItemBox.newItem();
+          gridRow = workspace.$.salesOrderLineItemBox.$.editableGridRow;
+          gridRow.$.itemSiteWidget.doValueChange({value: {item: submodels.itemModel,
+            site: submodels.siteModel}});
+          gridRow.$.quantityWidget.doValueChange({value: 5});
+          setTimeout(function () {
+            done();
+          }, 3000);
+        });
+      }
+    }],
     updateHash: {
-      wasQuote: false
+      orderNotes: "foo"
     }
   };
 
@@ -630,8 +644,8 @@ setTimeout:true, before:true, clearTimeout:true, exports:true, it:true, describe
         'Balance' which is equal SO Cash balance and is uneditable,
         'Amount Received' which is the total cash received with selectable currency and
         is editable,
-        'Funds Type' picker menu: Cash, Visa, American Express, Discover, MasterCard, 
-        Other Credit Card, Check, Certified Check, Wire Transfer, Other --picker should 
+        'Funds Type' picker menu: Cash, Visa, American Express, Discover, MasterCard,
+        Other Credit Card, Check, Certified Check, Wire Transfer, Other --picker should
         coincide with XM.FundsTypes,
         check/Document- editable string field 'documentNumber',
         'Post Cash Payment' selectable button, this option will 'save' the Sales Order and
@@ -698,7 +712,7 @@ setTimeout:true, before:true, clearTimeout:true, exports:true, it:true, describe
         /**
         @member -
         @memberof SalesOrderPayment
-        @description Selecting to post cash payment with blank or zero in 'Amount Received' 
+        @description Selecting to post cash payment with blank or zero in 'Amount Received'
           field should display an error message
         */
         it("Selecting to post cash payment with blank or zero in 'Amount Received'  " +
