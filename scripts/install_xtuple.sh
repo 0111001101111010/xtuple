@@ -196,6 +196,7 @@ setup_postgres() {
 
 	sudo cp $PGDIR/pg_hba.conf $PGDIR/pg_hba.conf.default
 	sudo cat $PGDIR/pg_hba.conf.default | sed "s/local\s*all\s*postgres.*/local\tall\tpostgres\ttrust/" | sed "s/local\s*all\s*all.*/local\tall\tall\ttrust/" | sed "s#host\s*all\s*all\s*127\.0\.0\.1.*#host\tall\tall\t127.0.0.1/32\ttrust#" | sudo tee $PGDIR/pg_hba.conf > /dev/null
+  echo "plv8.start_proc = 'xt.js_init'" | sudo tee -a $PGDIR/postgresql.conf
 	sudo chown postgres $PGDIR/pg_hba.conf
 
   log "restarting postgres..."
