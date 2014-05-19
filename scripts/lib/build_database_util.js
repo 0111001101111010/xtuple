@@ -332,7 +332,7 @@ regexp:true, undef:true, strict:true, trailing:true, white:true */
         if (options.runJsInit) {
           // unless it it hasn't yet been defined (ie. lib/orm),
           // running xt.js_init() is probably a good idea.
-          extensionSql = "select xt.js_init();" + extensionSql;
+          //extensionSql = "select xt.js_init();" + extensionSql;
         }
 
         if (options.wipeViews) {
