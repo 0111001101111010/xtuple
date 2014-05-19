@@ -1,15 +1,11 @@
 create or replace function xt.comment_did_change() returns trigger as $$
-/* Copyright (c) 1999-2011 by OpenMFG LLC, d/b/a xTuple. 
+/* Copyright (c) 1999-2011 by OpenMFG LLC, d/b/a xTuple.
    See www.xm.ple.com/CPAL for the full text of the software license. */
 
 return (function () {
 
-  if (typeof XT === 'undefined') { 
-    plv8.execute("select xt.js_init();"); 
-  }
-
  if (NEW.comment_cmnttype_id != OLD.comment_cmnttype_id) {
-   throw new Error('Comment type can not be changed'); 
+   throw new Error('Comment type can not be changed');
   }
 
  /* This exception for 'Notes to Comment' is a hack on a hack. There must be a better way. */
@@ -26,7 +22,7 @@ return (function () {
  if (!isEditable && !XT.allowEditComments) {
    throw new Error('Comment is not editble and can not be changed');
  }
-  
+
  return NEW;
 
 }());

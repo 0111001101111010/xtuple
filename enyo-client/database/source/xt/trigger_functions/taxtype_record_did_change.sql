@@ -4,13 +4,9 @@ create or replace function xt.taxtype_record_did_change() returns trigger as $$
 
 return (function () {
 
-  if (typeof XT === 'undefined') { 
-    plv8.execute("select xt.js_init();"); 
-  }
-
  /* Prevent recursion */
  if (XT.ignoreTaxTypeRecordDidChange) { return NEW; }
- 
+
  /* Server side tax type setting */
  var data = Object.create(XT.Data),
    overrideTax = data.checkPrivilege("OverrideTax"),
@@ -32,7 +28,7 @@ return (function () {
  sql = sql.replace(/{pre}/g, prefix);
  query = plv8.execute(sql, [id]);
  taxType = query.length ? query[0].taxType : null;
- 
+
  /* Update the record with the tax type */
  XT.ignoreTaxTypeRecordDidChange = true;
  sql = "update {pre}item set {pre}item_taxtype_id = $1 where {pre}item_id = $2;";

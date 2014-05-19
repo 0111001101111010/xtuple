@@ -4,10 +4,6 @@ create or replace function xt.usrpref_did_change() returns trigger as $$
 
 return (function () {
 
-  if (typeof XT === 'undefined') { 
-    plv8.execute("select xt.js_init();"); 
-  }
-
  var sql = "update xt.usrlite set usr_{name} = $1 where usr_username = $2",
    val = NEW.usrpref_value,
    name;
@@ -22,20 +18,20 @@ return (function () {
      name = NEW.usrpref_name;
      break;
    case "DisableExportContents":
-     name = "disable_export"; 
+     name = "disable_export";
  }
 
  if (NEW.usrpref_name === 'active' ||
      NEW.usrpref_name === 'agent' ||
      NEW.usrpref_name === 'DisableExportContents') {
-   val = val === 't' ? true : false; 
+   val = val === 't' ? true : false;
  }
 
  if (name) {
-   sql = sql.replace("{name}", name); 
+   sql = sql.replace("{name}", name);
    plv8.execute(sql, [ val, NEW.usrpref_username]);
  }
- 
+
  return NEW;
 
 }());

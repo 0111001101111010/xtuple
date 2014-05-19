@@ -4,10 +4,6 @@ create or replace function xt.usr_did_change() returns trigger as $$
 
 return (function () {
 
-  if (typeof XT === 'undefined') { 
-    plv8.execute("select xt.js_init();"); 
-  }
-
  var sql = "select setUserPreference('" + NEW.usr_username + "', '{name}', $1)";
  if (TG_OP === 'INSERT') {
    plv8.execute('select xt.createuser($1, false)', [NEW.usr_username.toLowerCase()]);
