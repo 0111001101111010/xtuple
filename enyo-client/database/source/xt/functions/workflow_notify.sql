@@ -16,7 +16,7 @@ create or replace function xt.workflow_notify(uuid uuid) returns boolean volatil
     currentUserEmailSql = "select usr_email from xt.usrlite where usr_username = $1",
     currentUserResult = plv8.execute(currentUserEmailSql, [XT.username]),
     currentUserEmail = currentUserResult.length ? currentUserResult[0].usr_email : "",
-    objectSql = "select xt.js_init();select xt.get($1);",
+    objectSql = "select xt.get($1);",
     getObj,
     objectData,
     results,
@@ -58,7 +58,7 @@ create or replace function xt.workflow_notify(uuid uuid) returns boolean volatil
   }
   result = results[0],
 
-  /* the to address will be whatever is in the profile, plus the owner and 
+  /* the to address will be whatever is in the profile, plus the owner and
     assigned-to user on the task */
   toAddresses = result.emlprofile_to ? result.emlprofile_to.split(",") : [];
   if(result.owner_email) {
@@ -70,7 +70,7 @@ create or replace function xt.workflow_notify(uuid uuid) returns boolean volatil
 
   /* remove duplicate email addresses */
   toAddresses = toAddresses.unique();
-  
+
   /* do not send an email to the user who is responsible for the change */
   toAddresses = toAddresses.filter(function (address) {
     return address !== currentUserEmail;
@@ -98,4 +98,3 @@ create or replace function xt.workflow_notify(uuid uuid) returns boolean volatil
   plv8.execute("select pg_notify($1, $2);", ["nodext", JSON.stringify(payload)]);
 
 $$ language plv8;
-
