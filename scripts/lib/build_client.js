@@ -24,7 +24,7 @@ var _ = require('underscore'),
   exports.getClientSql = function (extPath, callback) {
     var extName,
       constructQuery = function (contents, extension, version, language) {
-        return "select xt.js_init();select xt.insert_client($$" + contents +
+        return "select xt.insert_client($$" + contents +
           "$$, '" + extension +
           "', '" + version +
           "', '" + language + "');";

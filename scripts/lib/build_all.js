@@ -43,7 +43,7 @@ var _ = require('underscore'),
         var result,
           credsClone = JSON.parse(JSON.stringify(creds)),
           existsSql = "select relname from pg_class where relname = 'ext'",
-          preInstallSql = "select xt.js_init();update xt.ext set ext_location = '/core-extensions' " +
+          preInstallSql = "update xt.ext set ext_location = '/core-extensions' " +
             "where ext_name = 'oauth2' and ext_location = '/xtuple-extensions';",
           extSql = preInstallSql + "SELECT * FROM xt.ext ORDER BY ext_load_order",
           defaultExtensions = [
@@ -239,4 +239,3 @@ var _ = require('underscore'),
     }
   };
 }());
-
