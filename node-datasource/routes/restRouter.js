@@ -351,7 +351,7 @@ module.exports = (function () {
         user: {
           id: "admin",
           username: "admin",
-          organization: "inventory"
+          organization: "dev"
         }
       };
   }
