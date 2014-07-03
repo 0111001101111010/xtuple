@@ -341,6 +341,7 @@ return (function () {
       /* Do a hard trim to 900 so something prints. */
       XT.message(500, "Internal Server Error");
       plv8.elog(WARNING, message.substring(0, 900));
+      plv8.elog(WARNING, JSON.stringify(error,null,2));
       throw "unhandledError";
     }
   }
@@ -905,3 +906,4 @@ return (function () {
 }());
 
 $$ language plv8;
+select xt.js_init(true);
