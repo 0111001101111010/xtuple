@@ -1017,7 +1017,6 @@
     "public/tables/ccpay.sql",
     "public/tables/ccbank.sql",
     "public/tables/metric.sql",
-    "public/tables/payco.sql",
     "public/tables/priv.sql",
     "public/tables/tax.sql",
     "public/tables/taxpay.sql",
