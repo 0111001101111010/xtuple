@@ -345,9 +345,9 @@ module.exports = (function () {
         // id: user.get('username'),
         // username: user.get('username'),
         // organization: user.get('organization')
-        id: user.get('admin'),
-        username: user.get('admin'),
-        organization: user.get('dev')
+        id: 'admin',
+        username: 'admin',
+        organization: 'dev'
       }
     };
   }
