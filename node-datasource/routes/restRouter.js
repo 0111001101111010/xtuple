@@ -339,12 +339,15 @@ module.exports = (function () {
    * Create a session passport object given a req.user
    */
   function getPassport(user, next) {
-    if (!user) return next(new Error('user is not defined'));
+    //if (!user) return next(new Error('user is not defined'));
     return {
       user: {
-        id: user.get('username'),
-        username: user.get('username'),
-        organization: user.get('organization')
+        // id: user.get('username'),
+        // username: user.get('username'),
+        // organization: user.get('organization')
+        id: user.get('admin'),
+        username: user.get('admin'),
+        organization: user.get('dev')
       }
     };
   }

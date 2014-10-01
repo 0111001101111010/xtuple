@@ -38,7 +38,7 @@ regexp:true, undef:true, strict:true, trailing:true, white:true */
     generateOauthKey = require('./generate_oauth_key'),
     installExtension = require('./install_extension'),
     locale = require('./locale'),
-    passport = require('passport'),
+    //passport = require('passport'),
     redirector = require('./redirector'),
     recover = require('./recover'),
     restDiscovery = require('./restDiscovery'),
@@ -79,7 +79,7 @@ regexp:true, undef:true, strict:true, trailing:true, white:true */
     restDiscovery.getRest
   ];
   exports.restRouter = [
-    passport.authenticate('bearer', { session: false }),
+    //passport.authenticate('bearer', { session: false }),
     restRouter.router
   ];
 
